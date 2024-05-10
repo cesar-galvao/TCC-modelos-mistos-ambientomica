@@ -1,0 +1,53 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Artes e Barroso}{2023}]{metodosmultivariados_artes}
+Artes, R. \& Barroso, L.~P. (2023).
+\newblock {\em Métodos Multivariados de Análise Estatística}.
+\newblock Blucher.
+
+\bibitem[\protect\astroncite{Breseghello et~al.}{2021}]{breseghello2021}
+Breseghello, F., de~Mello, R.~N., Pinheiro, P., Soares, D., {Lopes Júnior}, S., Nakano~Rangel, P.~H., {Guimarães}, E., de~Castro, A.~P., Colombari~Filho, J., {de Magalhães Júnior}, A.~M., Fagundes, P. R.~R., de~Carvalho Ferreira~Neves, P., Furtini, I.~V., Utumi, M.~M., Pereira, J., Cordeiro, A., Filho, A.~S., Abreu, G.~B., de~Moura~Neto, F.~P., Pietragalla, J., {Hernández}, M.~V., \& Crossa, J. (2021).
+\newblock Building the embrapa rice breeding dataset for efficient data reuse.
+\newblock {\em Crop Science}, 61(5):3445--3457.
+
+\bibitem[\protect\astroncite{Breseghello et~al.}{2011}]{breseghello2011}
+Breseghello, F., de~Morais, O.~P., Pinheiro, P.~V., Silva, A. C.~S., da~Maia~de Castro, E., Guimar{\~a}es, {\'E}.~P., de~Castro, A.~P., Pereira, J.~A., de~Matos~Lopes, A., Utumi, M.~M., et~al. (2011).
+\newblock Results of 25 years of upland rice breeding in brazil.
+\newblock {\em Crop Science}, 51(3):914--923.
+
+\bibitem[\protect\astroncite{Chenu}{2015}]{chenu2015characterizing}
+Chenu, K. (2015).
+\newblock Characterizing the crop environment -- nature, significance and applications.
+\newblock {\em Crop physiology}, pages 321--348.
+
+\bibitem[\protect\astroncite{Hickey et~al.}{2019}]{hickey2019breeding}
+Hickey, L.~T., N.~Hafeez, A., Robinson, H., Jackson, S.~A., Leal-Bertioli, S.~C., Tester, M., Gao, C., Godwin, I.~D., Hayes, B.~J., \& Wulff, B.~B. (2019).
+\newblock Breeding crops to feed 10 billion.
+\newblock {\em Nature biotechnology}, 37(7):744--754.
+
+\bibitem[\protect\astroncite{Jorasch}{2019}]{jorasch2019}
+Jorasch, P. (2019).
+\newblock The global need for plant breeding innovation.
+\newblock {\em Transgenic Research}, 28(Suppl 2):81--86.
+
+\bibitem[\protect\astroncite{Journel e Journel}{1989}]{cokriging}
+Journel, A.~G. \& Journel, A.~G. (1989).
+\newblock {\em Fundamentals of geostatistics in five lessons}, volume~8.
+\newblock American Geophysical Union Washington, DC.
+
+\bibitem[\protect\astroncite{Morettin e Singer}{2022}]{morettindatasci}
+Morettin, P.~A. \& Singer, J. d.~M. (2022).
+\newblock {\em Estatística e Ciência de Dados}.
+\newblock LTC.
+
+\bibitem[\protect\astroncite{Resende et~al.}{2023}]{melhora_precisa1}
+Resende, R.~T., Brondani, C., \& Chaves, L.~J. (2023).
+\newblock O melhoramento na era de agricultura de precisão.
+\newblock In: {\em Melhoramento de Precisão}, R.~T. Resende \& C. Brondani, ed., chapter~1, pages 13--40. Embrapa Arroz e Feijão.
+
+\bibitem[\protect\astroncite{Resende et~al.}{2021}]{resende2020enviromics}
+Resende, R.~T., Piepho, H.-P., Rosa, G.~J., Silva-Junior, O.~B., e~Silva, F.~F., de~Resende, M. D.~V., \& Grattapaglia, D. (2021).
+\newblock Enviromics in breeding: applications and perspectives on envirotypic-assisted selection.
+\newblock {\em Theoretical and Applied Genetics}, 134:95--112.
+
+\end{thebibliography}

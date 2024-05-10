@@ -1,0 +1,1266 @@
+
+	\begin{longtable}{@{} p{4cm} p{4cm} p{8cm} @{}} 
+		\caption{Dicionário de variáveis do ERBD relacionadas aos ensaios}
+		\label{tab:dicionarioerbd1} \\
+		\toprule
+		\textbf{Variável} & \textbf{Nome}                    & \textbf{Detalhes}                                                           \\* \midrule
+		\endfirsthead
+		%
+		\endhead
+		%
+		\bottomrule
+		\endfoot
+		%
+		\endlastfoot
+		%
+		TRIAL                & Código do ensaio        & String único que identifica o ensaio                               \\
+		SYST   & Sistema de cultivo           & Indica tanto o subprograma de melhoramento quanto o ambiente do ensaio. Níveis: Irrigado ou de Sequeiro            \\
+		YEAR                 & Ano do ensaio           & Ano de preparação do ensaio. Ex: 2005: temporada 2005/2006         \\
+		DATE                 & Data de plantio         & Dia de plantio de sementes secas. Formato DD/MM/AAAA               \\
+		ST                   & Estado do Brasil        & Estado do Brasil onde o ensaio foi conduzido                       \\
+		LOCATION             & Local de plantio        & Nome do município onde o ensaio foi conduzido                      \\
+		LOC                  & Local de plantio        & Termo abreviado que indica o município                             \\
+		TYPE   & Tipo de ensaio               & Tipo de ensaio. ER: Ensaios Regionais de Rendimento; VCU: Valor de Cultivo e Uso (Ensaios Avançados de Rendimento) \\
+		DESIGN & Desenho Experimental         & O desenho estatístico do ensaio. RCB: delineamento de blocos completos ao acaso; LAT: delineamento em látice       \\
+		MEAN   & Média de rendimento de grãos & Média geral do ensaio do rendimento de grãos (kg ha$^{-1}$)                                       \\
+		H$^2$ & Hereditariedade         & Hereditariedade de sentido amplo do rendimento de grãos            \\
+		CV                   & Coeficiente de Variação & Coeficiente de variação experimental para rendimento de grãos (\%) \\ 
+		\bottomrule
+		\multicolumn{3}{@{}l}{\footnotesize\textit{Fonte: \cite{breseghello2021}}}\\
+	\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     		TABELA 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{@{} p{2.5cm} p{2.5cm} p{2.5cm} p{8.5cm} @{}} 
+	\caption{Dicionário de variáveis do ERBD das unidades experimentais}
+	\label{tab:dicionarioerbd2} \\
+	\toprule
+	\textbf{Nome na base} & \textbf{Nome da variável} & \textbf{Tipo}       & \textbf{Detalhes}                                                                         \\ \midrule
+	\endfirsthead
+	%
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	TRIAL  & Código do ensaio          & Link para Metadados & String único que identifica o ensaio                                                      \\
+	REP    & Número da Repetição       & Fator de Design     & Inteiro que indica a repetição dentro do ensaio                                           \\
+	BLO    & Número do Bloco           & Fator de Design     & Inteiro que indica o bloco dentro da repetição (apenas em delineamento em látice)         \\
+	GEN    & Nome do Genótipo          & Fator Experimental  & Identificação do germoplasma (linhagem pura, variedade local ou cultivar)                 \\
+	GY     & Rendimento de grãos       & Numérico            & Peso do arroz em casca com 13\% de umidade, em kg ha$^{-1}$                              \\
+	PHT    & Altura da Planta          & Numérico            & Altura da planta do solo até a ponta da panícula primária, no estágio pré-colheita, em cm \\
+	DTF    & Dias até a Floração       & Numérico            & Número de dias desde o plantio de sementes secas até 50\% das plantas estarem floridas    \\
+	LOD    & Tombamento                & Escores de 1 a 9\footnote{Escores mais altos indicam níveis crescentes de tombamento ou doença.}    & Nível de tombamento da copa da parcela, avaliado no estágio pré-colheita                  \\
+	LBL    & Blast na Folha            & Escores de 1 a 9    & Severidade da doença de brusone do arroz, avaliada em folhas no estágio vegetativo       \\
+	PBL    & Blast na Panícula         & Escores de 1 a 9    & Severidade da doença de brusone do arroz, avaliada em panículas no estágio pré-colheita  \\
+	BSP    & Mancha Parda              & Escores de 1 a 9    & Severidade da doença causada por \textit{Bipolaris oryzae}, avaliada em folhas no estágio pré-colheita                            \\
+	LSC    & Escaldadura da Folha      & Escores de 1 a 9    & Severidade da doença causada por \textit{Monographella albescens}, avaliada em folhas no estágio pré-colheita                     \\
+	GDS    & Descoloração do Grão      & Escores de 1 a 9    & Severidade do escurecimento ou manchas nos grãos, causada por vários fungos, avaliada nas glumas no estágio pré-colheita \\
+	\bottomrule
+	\multicolumn{4}{@{}l}{\footnotesize\textit{Fonte: \cite{breseghello2021}}}\\
+\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     		TABELA 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{@{} p{4cm} p{4cm} p{8cm} @{}} 
+	\caption{Dicionário de variáveis ambientais}
+	\label{tab:dicionarioambientais} \\
+	\toprule
+	\textbf{Nome na base} & \textbf{Nome da variável} & \textbf{Descrição} \\ \midrule
+	\endfirsthead
+	%
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	WorldClim &
+	bio\_1 &
+	Temperatura Média Anual \\
+	WorldClim &
+	bio\_2 &
+	Amplitude Diurna Média (Média das diferenças mensais (temp máx - temp mín)) \\
+	WorldClim &
+	bio\_3 &
+	Isotermia (BIO2/BIO7) (×100) \\
+	WorldClim &
+	bio\_4 &
+	Sazonalidade da Temperatura (desvio padrão ×100) \\
+	WorldClim &
+	bio\_5 &
+	Temperatura Máxima do Mês Mais Quente \\
+	WorldClim &
+	bio\_6 &
+	Temperatura Mínima do Mês Mais Frio \\
+	WorldClim &
+	bio\_7 &
+	Amplitude Térmica Anual (BIO5-BIO6) \\
+	WorldClim &
+	bio\_8 &
+	Temperatura Média do Trimestre Mais Chuvoso \\
+	WorldClim &
+	bio\_9 &
+	Temperatura Média do Trimestre Mais Seco \\
+	WorldClim &
+	bio\_10 &
+	Temperatura Média do Trimestre Mais Quente \\
+	WorldClim &
+	bio\_11 &
+	Temperatura Média do Trimestre Mais Frio \\
+	WorldClim &
+	bio\_12 &
+	Precipitação Anual \\
+	WorldClim &
+	bio\_13 &
+	Precipitação do Mês Mais Chuvoso \\
+	WorldClim &
+	bio\_14 &
+	Precipitação do Mês Mais Seco \\
+	WorldClim &
+	bio\_15 &
+	Sazonalidade da Precipitação (Coeficiente de Variação) \\
+	WorldClim &
+	bio\_16 &
+	Precipitação do Trimestre Mais Chuvoso \\
+	WorldClim &
+	bio\_17 &
+	Precipitação do Trimestre Mais Seco \\
+	WorldClim &
+	bio\_18 &
+	Precipitação do Trimestre Mais Quente \\
+	WorldClim &
+	bio\_19 &
+	Precipitação do Trimestre Mais Frio \\
+	SoilGrids &
+	bdod\_0-5cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 0 a 5 da superfície – média \\
+	SoilGrids &
+	bdod\_0-5cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_0-5cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_0-5cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	bdod\_5-15cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	bdod\_5-15cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_5-15cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_5-15cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	bdod\_15-30cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	bdod\_15-30cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_15-30cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_15-30cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	bdod\_30-60cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	bdod\_30-60cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_30-60cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_30-60cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	bdod\_60-100cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	bdod\_60-100cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_60-100cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_60-100cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	bdod\_100-200cm\_mean &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	bdod\_100-200cm\_Q0p05 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	bdod\_100-200cm\_Q0p5 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	bdod\_100-200cm\_Q0p95 &
+	Densidade aparente da fração fina do solo em cg/cm³ para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_0-5cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 0 a 5 da superfície – média \\
+	SoilGrids &
+	cec\_0-5cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_0-5cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_0-5cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_5-15cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	cec\_5-15cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_5-15cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_5-15cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_15-30cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	cec\_15-30cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_15-30cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_15-30cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_30-60cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	cec\_30-60cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_30-60cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_30-60cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_60-100cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	cec\_60-100cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_60-100cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_60-100cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cec\_100-200cm\_mean &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	cec\_100-200cm\_Q0p05 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cec\_100-200cm\_Q0p5 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cec\_100-200cm\_Q0p95 &
+	Capacidade de Troca de Cátions do solo em mmol(c)/kg para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_0-5cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	cfvo\_0-5cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_0-5cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_0-5cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_5-15cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	cfvo\_5-15cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_5-15cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_5-15cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_15-30cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	cfvo\_15-30cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_15-30cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_15-30cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_30-60cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	cfvo\_30-60cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_30-60cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_30-60cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_60-100cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	cfvo\_60-100cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_60-100cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_60-100cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	cfvo\_100-200cm\_mean &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	cfvo\_100-200cm\_Q0p05 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	cfvo\_100-200cm\_Q0p5 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	cfvo\_100-200cm\_Q0p95 &
+	Fração volumétrica de fragmentos grosseiros (\textgreater 2 mm) em cm3/dm3 (vol‰) para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_0-5cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	clay\_0-5cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_0-5cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_0-5cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_5-15cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	clay\_5-15cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_5-15cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_5-15cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_15-30cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	clay\_15-30cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_15-30cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_15-30cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_30-60cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	clay\_30-60cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_30-60cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_30-60cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_60-100cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	clay\_60-100cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_60-100cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_60-100cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	clay\_100-200cm\_mean &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	clay\_100-200cm\_Q0p05 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	clay\_100-200cm\_Q0p5 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	clay\_100-200cm\_Q0p95 &
+	Proporção de partículas de argila (\textless 0,002 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_0-5cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	nitrogen\_0-5cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_0-5cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_0-5cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_5-15cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	nitrogen\_5-15cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_5-15cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_5-15cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_15-30cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	nitrogen\_15-30cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_15-30cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_15-30cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_30-60cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	nitrogen\_30-60cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_30-60cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_30-60cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_60-100cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	nitrogen\_60-100cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_60-100cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_60-100cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	nitrogen\_100-200cm\_mean &
+	Nitrogênio Total (N) cg/kg  para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	nitrogen\_100-200cm\_Q0p05 &
+	Nitrogênio Total (N) cg/kg  para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	nitrogen\_100-200cm\_Q0p5 &
+	Nitrogênio Total (N) cg/kg  para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	nitrogen\_100-200cm\_Q0p95 &
+	Nitrogênio Total (N) cg/kg  para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_0-5cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	ocd\_0-5cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_0-5cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_0-5cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_5-15cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	ocd\_5-15cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_5-15cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_5-15cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_15-30cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	ocd\_15-30cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_15-30cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_15-30cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_30-60cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	ocd\_30-60cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_30-60cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_30-60cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_60-100cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	ocd\_60-100cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_60-100cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_60-100cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocd\_100-200cm\_mean &
+	Densidade de carbono orgânico em hg/m³ para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	ocd\_100-200cm\_Q0p05 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocd\_100-200cm\_Q0p5 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocd\_100-200cm\_Q0p95 &
+	Densidade de carbono orgânico em hg/m³ para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	ocs\_0-30cm\_mean &
+	Estoques de carbono orgânico em t/ha para centímetros 0 a 30 da superfície - média \\
+	SoilGrids &
+	ocs\_0-30cm\_Q0p05 &
+	Estoques de carbono orgânico em t/ha para centímetros 0 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	ocs\_0-30cm\_Q0p5 &
+	Estoques de carbono orgânico em t/ha para centímetros 0 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	ocs\_0-30cm\_Q0p95 &
+	Estoques de carbono orgânico em t/ha para centímetros 0 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_0-5cm\_mean &
+	pH do solo em pHx10 para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	phh2o\_0-5cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_0-5cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_0-5cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_5-15cm\_mean &
+	pH do solo em pHx10 para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	phh2o\_5-15cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_5-15cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_5-15cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_15-30cm\_mean &
+	pH do solo em pHx10 para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	phh2o\_15-30cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_15-30cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_15-30cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_30-60cm\_mean &
+	pH do solo em pHx10 para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	phh2o\_30-60cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_30-60cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_30-60cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_60-100cm\_mean &
+	pH do solo em pHx10 para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	phh2o\_60-100cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_60-100cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_60-100cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	phh2o\_100-200cm\_mean &
+	pH do solo em pHx10 para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	phh2o\_100-200cm\_Q0p05 &
+	pH do solo em pHx10 para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	phh2o\_100-200cm\_Q0p5 &
+	pH do solo em pHx10 para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	phh2o\_100-200cm\_Q0p95 &
+	pH do solo em pHx10 para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_0-5cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	sand\_0-5cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_0-5cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_0-5cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_5-15cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	sand\_5-15cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_5-15cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_5-15cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_15-30cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	sand\_15-30cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_15-30cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_15-30cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_30-60cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	sand\_30-60cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_30-60cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_30-60cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_60-100cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	sand\_60-100cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_60-100cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_60-100cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	sand\_100-200cm\_mean &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	sand\_100-200cm\_Q0p05 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	sand\_100-200cm\_Q0p5 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	sand\_100-200cm\_Q0p95 &
+	Proportion of sand particles (\textgreater 0.05 mm) in the fine earth fraction g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_0-5cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	silt\_0-5cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_0-5cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_0-5cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_5-15cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	silt\_5-15cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_5-15cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_5-15cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_15-30cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	silt\_15-30cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_15-30cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_15-30cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_30-60cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	silt\_30-60cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_30-60cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_30-60cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_60-100cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	silt\_60-100cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_60-100cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_60-100cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	silt\_100-200cm\_mean &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	silt\_100-200cm\_Q0p05 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	silt\_100-200cm\_Q0p5 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	silt\_100-200cm\_Q0p95 &
+	Proporção de partículas de areia (\textgreater 0,05 mm) na fração fina do solo em g/kg para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_0-5cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 0 a 5 da superfície - média \\
+	SoilGrids &
+	soc\_0-5cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 0 a 5 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_0-5cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 0 a 5 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_0-5cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 0 a 5 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_5-15cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 5 a 15 da superfície – média \\
+	SoilGrids &
+	soc\_5-15cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 5 a 15 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_5-15cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 5 a 15 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_5-15cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 5 a 15 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_15-30cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	soc\_15-30cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 15 a 30 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_15-30cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 15 a 30 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_15-30cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 15 a 30 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_30-60cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 15 a 30 da superfície – média \\
+	SoilGrids &
+	soc\_30-60cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 30 a 60 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_30-60cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 30 a 60 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_30-60cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 30 a 60 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_60-100cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 60 a 100 da superfície – média \\
+	SoilGrids &
+	soc\_60-100cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 60 a 100 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_60-100cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 60 a 100 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_60-100cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 60 a 100 da superfície – predição para quantil 0,95 \\
+	SoilGrids &
+	soc\_100-200cm\_mean &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 100 a 200 da superfície – média \\
+	SoilGrids &
+	soc\_100-200cm\_Q0p05 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 100 a 200 da superfície – predição para quantil 0,05 \\
+	SoilGrids &
+	soc\_100-200cm\_Q0p5 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 100 a 200 da superfície – predição para quantil 0,5 \\
+	SoilGrids &
+	soc\_100-200cm\_Q0p95 &
+	Conteúdo de carbono orgânico do solo na fração fina do solo em dg/kg para centímetros 100 a 200 da superfície – predição para quantil 0,95 \\
+	NasaPower &
+	T2M 2010a2019ANN &
+	Média anual da temperatura média a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019ANN &
+	Média anual da umidade relativa a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	WS2M 2010a2019ANN &
+	Média anual da velocidade do vento a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019ANN &
+	Média anual da temperatura do ponto de orvalho a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	T2M MAX 2010a2019ANN &
+	Média anual da temperatura máxima a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019ANN &
+	Média anual da temperatura mínima a 2 metros acima do solo para o período de 2010 a 2019. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019ANN &
+	Precipitação total corrigida para o período de 2010 a 2019. O "CORR" indica que esta medição foi corrigida ou ajustada de alguma forma. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019ANN &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para o período de 2010 a 2019. Média ao longo da década. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019ANN &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu para o período de 2010 a 2019. Média ao longo da década. \\
+	NasaPower &
+	alt 2010a2019ANN &
+	Altitude média do local para o qual os dados foram registrados durante o período de 2010 a 2019. \\
+	NasaPower &
+	T2M 2010a2019APR &
+	Temperatura média a 2 metros acima do solo durante o mês de abril para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019APR &
+	Umidade relativa média a 2 metros acima do solo durante abril para os anos especificados. \\
+	NasaPower &
+	WS2M 2010a2019APR &
+	Velocidade média do vento a 2 metros acima do solo durante abril ao longo do período de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019APR &
+	Temperatura média do ponto de orvalho a 2 metros durante abril para cada ano no intervalo especificado. O ponto de orvalho é um indicador de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019APR &
+	Temperatura máxima média a 2 metros acima do solo durante abril para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019APR &
+	Temperatura mínima média a 2 metros acima do solo durante abril durante o mesmo período. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019APR &
+	Precipitação total corrigida registrada durante abril de cada ano de 2010 a 2019. As correções normalmente ajustam diversos fatores para garantir precisão. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019APR &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu durante abril de cada ano na década. Mede a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019APR &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante abril para cada ano de 2010 a 2019. Mede a radiação de onda curta (como a luz solar) que alcança a superfície. \\
+	NasaPower &
+	alt 2010a2019APR &
+	Representa a altitude média do(s) local(is) de onde os dados de abril foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019AUG &
+	Temperatura média a 2 metros acima do solo durante o mês de agosto para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019AUG &
+	Umidade relativa média a 2 metros acima do solo registrada durante agosto ao longo dos anos especificados. \\
+	NasaPower &
+	WS2M 2010a2019AUG &
+	Velocidade média do vento a 2 metros acima do solo medida durante agosto para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019AUG &
+	Temperatura média do ponto de orvalho a 2 metros durante agosto para os anos de 2010 a 2019. O ponto de orvalho dá uma indicação do conteúdo de umidade no ar. \\
+	NasaPower &
+	T2M MAX 2010a2019AUG &
+	Temperatura máxima média a 2 metros acima do solo durante agosto para a década de interesse. \\
+	NasaPower &
+	T2M MIN 2010a2019AUG &
+	Temperatura mínima média a 2 metros acima do solo durante agosto durante o mesmo período. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019AUG &
+	Precipitação total corrigida que ocorreu durante agosto de cada ano de 2010 a 2019. "Corrigida" implica ajustes para anomalias ou erros de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019AUG &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu durante o mês de agosto ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019AUG &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante agosto para a década em questão. \\
+	NasaPower &
+	alt 2010a2019AUG &
+	Representa a altitude média do(s) local(is) de onde os dados de agosto foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019DEC &
+	Temperatura média a 2 metros acima do solo durante o mês de dezembro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019DEC &
+	Umidade relativa média a 2 metros acima do solo durante dezembro para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019DEC &
+	Velocidade média do vento a 2 metros acima do solo durante dezembro ao longo dos anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019DEC &
+	Temperatura média do ponto de orvalho a 2 metros durante dezembro para os anos de 2010 a 2019. A temperatura do ponto de orvalho é uma medida de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019DEC &
+	Temperatura máxima média a 2 metros acima do solo durante dezembro para a década em questão. \\
+	NasaPower &
+	T2M MIN 2010a2019DEC &
+	Temperatura mínima média a 2 metros acima do solo durante dezembro durante o mesmo período. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019DEC &
+	Precipitação total corrigida observada durante dezembro de cada ano de 2010 a 2019. As correções normalmente envolvem ajustes nos dados brutos para eliminar viéses ou erros conhecidos. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019DEC &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para dezembro ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019DEC &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante dezembro para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019DEC &
+	Representa a altitude média do(s) local(is) de onde os dados de dezembro foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019FEB &
+	Temperatura média a 2 metros acima do solo durante o mês de fevereiro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019FEB &
+	Umidade relativa média a 2 metros acima do solo registrada durante fevereiro ao longo dos anos especificados. \\
+	NasaPower &
+	WS2M 2010a2019FEB &
+	Velocidade média do vento a 2 metros acima do solo medida durante fevereiro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019FEB &
+	Temperatura média do ponto de orvalho a 2 metros durante fevereiro para os anos de 2010 a 2019. A temperatura do ponto de orvalho é um indicador importante de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019FEB &
+	Temperatura máxima média a 2 metros acima do solo durante fevereiro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019FEB &
+	Temperatura mínima média a 2 metros acima do solo durante fevereiro durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019FEB &
+	Precipitação total corrigida registrada durante fevereiro de cada ano de 2010 a 2019. "Corrigida" implica que os dados foram ajustados para corrigir erros ou viéses de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019FEB &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para o mês de fevereiro ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019FEB &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante fevereiro para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019FEB &
+	Representa a altitude média do(s) local(is) de onde os dados de fevereiro foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019JAN &
+	Temperatura média a 2 metros acima do solo durante o mês de janeiro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019JAN &
+	Umidade relativa média a 2 metros acima do solo durante janeiro para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019JAN &
+	Velocidade média do vento a 2 metros acima do solo medida durante janeiro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019JAN &
+	Temperatura média do ponto de orvalho a 2 metros durante janeiro para os anos de 2010 a 2019. O ponto de orvalho fornece uma medida da quantidade de umidade no ar. \\
+	NasaPower &
+	T2M MAX 2010a2019JAN &
+	Temperatura máxima média a 2 metros acima do solo durante janeiro para a década de interesse. \\
+	NasaPower &
+	T2M MIN 2010a2019JAN &
+	Temperatura mínima média a 2 metros acima do solo durante janeiro durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019JAN &
+	Precipitação total corrigida observada durante janeiro de cada ano de 2010 a 2019. O aspecto "corrigido" normalmente aborda quaisquer anomalias ou erros de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019JAN &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para janeiro ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019JAN &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante janeiro para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019JAN &
+	Representa a altitude média do(s) local(is) de onde os dados de janeiro foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019JUL &
+	Temperatura média a 2 metros acima do solo durante o mês de julho para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019JUL &
+	Umidade relativa média a 2 metros acima do solo durante julho para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019JUL &
+	Velocidade média do vento a 2 metros acima do solo medida durante julho para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019JUL &
+	Temperatura média do ponto de orvalho a 2 metros durante julho para os anos de 2010 a 2019. A temperatura do ponto de orvalho é uma medida de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019JUL &
+	Temperatura máxima média a 2 metros acima do solo durante julho para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019JUL &
+	Temperatura mínima média a 2 metros acima do solo durante julho durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019JUL &
+	Precipitação total corrigida registrada durante julho de cada ano de 2010 a 2019. O termo "corrigida" sugere que os dados foram ajustados para contabilizar erros ou viéses de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019JUL &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para julho ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019JUL &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante julho para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019JUL &
+	Representa a altitude média do(s) local(is) de onde os dados de julho foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019JUN &
+	Temperatura média a 2 metros acima do solo durante o mês de junho para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019JUN &
+	Umidade relativa média a 2 metros acima do solo durante junho para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019JUN &
+	Velocidade média do vento a 2 metros acima do solo medida durante junho para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019JUN &
+	Temperatura média do ponto de orvalho a 2 metros durante junho para os anos de 2010 a 2019. O ponto de orvalho é um indicador da quantidade de umidade no ar. \\
+	NasaPower &
+	T2M MAX 2010a2019JUN &
+	Temperatura máxima média a 2 metros acima do solo durante junho para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019JUN &
+	Temperatura mínima média a 2 metros acima do solo durante junho durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019JUN &
+	Precipitação total corrigida registrada durante junho de cada ano de 2010 a 2019. O termo "corrigida" indica ajustes feitos para contabilizar possíveis erros ou viéses de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019JUN &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para junho ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019JUN &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante junho para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019JUN &
+	Representa a altitude média do(s) local(is) de onde os dados de junho foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019MAR &
+	Temperatura média a 2 metros acima do solo durante o mês de março para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019MAR &
+	Umidade relativa média a 2 metros acima do solo durante março para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019MAR &
+	Velocidade média do vento a 2 metros acima do solo medida durante março para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019MAR &
+	Temperatura média do ponto de orvalho a 2 metros durante março para os anos de 2010 a 2019. O ponto de orvalho é uma medida de quanto de umidade está no ar. \\
+	NasaPower &
+	T2M MAX 2010a2019MAR &
+	Temperatura máxima média a 2 metros acima do solo durante março para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019MAR &
+	Temperatura mínima média a 2 metros acima do solo durante março durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019MAR &
+	Precipitação total corrigida registrada durante março de cada ano de 2010 a 2019. O termo "corrigida" geralmente se refere a ajustes feitos nos dados para corrigir imprecisões ou viéses conhecidos. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019MAR &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para março ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019MAR &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante março para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019MAR &
+	Representa a altitude média do(s) local(is) de onde os dados de março foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019MAY &
+	Temperatura média a 2 metros acima do solo durante o mês de maio para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019MAY &
+	Umidade relativa média a 2 metros acima do solo durante maio para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019MAY &
+	Velocidade média do vento a 2 metros acima do solo medida durante maio para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019MAY &
+	Temperatura média do ponto de orvalho a 2 metros durante maio para os anos de 2010 a 2019. A temperatura do ponto de orvalho é uma medida de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019MAY &
+	Temperatura máxima média a 2 metros acima do solo durante maio para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019MAY &
+	Temperatura mínima média a 2 metros acima do solo durante maio durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019MAY &
+	Precipitação total corrigida registrada durante maio de cada ano de 2010 a 2019. As correções geralmente abordam imprecisões ou viéses de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019MAY &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para maio ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019MAY &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante maio para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019MAY &
+	Representa a altitude média do(s) local(is) de onde os dados de maio foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019NOV &
+	Temperatura média a 2 metros acima do solo durante o mês de novembro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019NOV &
+	Umidade relativa média a 2 metros acima do solo durante novembro para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019NOV &
+	Velocidade média do vento a 2 metros acima do solo medida durante novembro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019NOV &
+	Temperatura média do ponto de orvalho a 2 metros durante novembro para os anos de 2010 a 2019. O ponto de orvalho indica a quantidade de umidade no ar. \\
+	NasaPower &
+	T2M MAX 2010a2019NOV &
+	Temperatura máxima média a 2 metros acima do solo durante novembro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019NOV &
+	Temperatura mínima média a 2 metros acima do solo durante novembro durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019NOV &
+	Precipitação total corrigida registrada durante novembro de cada ano de 2010 a 2019. O termo "corrigida" geralmente se refere a ajustes feitos nos dados para corrigir imprecisões ou viéses conhecidos. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019NOV &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para novembro ao longo dos anos de 2010 a 2019. Reflete a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019NOV &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante novembro para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019NOV &
+	Representa a altitude média do(s) local(is) de onde os dados de novembro foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019OCT &
+	Temperatura média a 2 metros acima do solo durante o mês de outubro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019OCT &
+	Umidade relativa média a 2 metros acima do solo durante outubro para o período especificado. \\
+	NasaPower &
+	WS2M 2010a2019OCT &
+	Velocidade média do vento a 2 metros acima do solo medida durante outubro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019OCT &
+	Temperatura média do ponto de orvalho a 2 metros durante outubro para os anos de 2010 a 2019. O ponto de orvalho é uma medida de umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019OCT &
+	Temperatura máxima média a 2 metros acima do solo durante outubro para os anos de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019OCT &
+	Temperatura mínima média a 2 metros acima do solo durante outubro durante o período especificado. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019OCT &
+	Precipitação total corrigida registrada durante outubro de cada ano de 2010 a 2019. Essa correção leva em conta imprecisões ou viéses de medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019OCT &
+	Radiação descendente de onda longa na superfície sob todas as condições de céu para outubro ao longo dos anos de 2010 a 2019. Isso mede a radiação de onda longa que alcança a superfície terrestre. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019OCT &
+	Radiação descendente de onda curta na superfície sob todas as condições de céu durante outubro para cada um dos anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019OCT &
+	Representa a altitude média do(s) local(is) de onde os dados de outubro foram coletados ao longo desses anos. \\
+	NasaPower &
+	T2M 2010a2019SEP &
+	Temperatura média medida a 2 metros acima do solo durante o mês de setembro ao longo dos anos de 2010 a 2019. \\
+	NasaPower &
+	RH2M 2010a2019SEP &
+	Umidade relativa média a 2 metros acima do solo durante setembro ao longo do período de 2010 a 2019. \\
+	NasaPower &
+	WS2M 2010a2019SEP &
+	Velocidade média do vento a 2 metros acima do solo para setembro durante os anos especificados de 2010 a 2019. \\
+	NasaPower &
+	T2MDEW 2010a2019SEP &
+	Temperatura média do ponto de orvalho a 2 metros acima do solo em setembro para os anos de 2010 a 2019. A temperatura do ponto de orvalho é uma medida da umidade atmosférica. \\
+	NasaPower &
+	T2M MAX 2010a2019SEP &
+	Temperatura máxima média a 2 metros acima do solo durante setembro para cada ano de 2010 a 2019. \\
+	NasaPower &
+	T2M MIN 2010a2019SEP &
+	Temperatura mínima média a 2 metros acima do solo durante setembro para os anos de 2010 a 2019. \\
+	NasaPower &
+	PRECTOTCORR 2010a2019SEP &
+	Precipitação total registrada para setembro a cada ano de 2010 a 2019, corrigida para quaisquer viéses ou imprecisões conhecidos na medição. \\
+	NasaPower &
+	ALLSKY SFC LW DWN 2010a2019SEP &
+	Quantidade média de radiação descendente de onda longa na superfície sob todas as condições de céu durante setembro para os anos especificados de 2010 a 2019, indicando a radiação de onda longa que alcança a superfície da Terra. \\
+	NasaPower &
+	ALLSKY SFC SW DWN 2010a2019SEP &
+	Esta variável mede a média da radiação descendente de onda curta na superfície sob todas as condições de céu (como a luz solar) durante setembro para os anos de 2010 a 2019. \\
+	NasaPower &
+	alt 2010a2019SEP &
+	Representa a altitude média do(s) local(is) de onde os dados de setembro foram coletados ao longo desses anos. \\ 
+	\bottomrule
+    \multicolumn{3}{@{}l}{\footnotesize\textit{Fonte: elaboração própria.}}\\
+\end{longtable}

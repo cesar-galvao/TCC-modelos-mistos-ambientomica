@@ -1,0 +1,35 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+
+% Structure of the metadata related to field trials included in the Embrapa Rice Breeding Dataset.
+
+\section{Dicionário de variáveis do ERBD}\label{sec: dicionario-erbd2}
+
+\begin{longtable}{@{} p{2.5cm} p{2.5cm} p{2.5cm} p{8.5cm} @{}} 
+	\toprule
+	\textbf{Nome na base} & \textbf{Nome da variável} & \textbf{Tipo}       & \textbf{Detalhes}                                                                         \\* \midrule
+	\endfirsthead
+	%
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	TRIAL                 & Código do ensaio          & Link para Metadados & String único que identifica o ensaio                                                      \\
+	REP                   & Número da Repetição       & Fator de Design     & Inteiro que indica a repetição dentro do ensaio                                           \\
+	BLO                   & Número do Bloco           & Fator de Design     & Inteiro que indica o bloco dentro da repetição (apenas em delineamento em látice)         \\
+	GEN                   & Nome do Genótipo          & Fator Experimental  & Identificação do germoplasma (linhagem pura, variedade local ou cultivar)                 \\
+	GY                    & Rendimento de grãos       & Numérico            & Peso do arroz em casca com 13\% de umidade, em kg ha\textasciicircum{}\{-1\}              \\
+	PHT                   & Altura da Planta          & Numérico            & Altura da planta do solo até a ponta da panícula primária, no estágio pré-colheita, em cm \\
+	DTF                   & Dias até a Floração       & Numérico            & Número de dias desde o plantio de sementes secas até 50\% das plantas estarem floridas    \\
+	LOD                   & Tombamento                & Escores de 1 a 9\footnote{Escores mais altos indicam níveis crescentes de tombamento ou doença.}    & Nível de tombamento da copa da parcela, avaliado no estágio pré-colheita                  \\
+	LBL & Blast na Folha       & Escores de 1 a 9 & Severidade da doença de brusone do arroz, causada por \textit{Magnaporthe oryzae}, avaliada em folhas no estágio vegetativo       \\
+	PBL & Blast na Panícula    & Escores de 1 a 9 & Severidade da doença de brusone do arroz, causada por \textit{Magnaporthe oryzae}, avaliada em panículas no estágio pré-colheita  \\
+	BSP & Mancha Parda         & Escores de 1 a 9 & Severidade da doença causada por \textit{Bipolaris oryzae}, avaliada em folhas no estágio pré-colheita                            \\
+	LSC & Escaldadura da Folha & Escores de 1 a 9 & Severidade da doença causada por \textit{Monographella albescens}, avaliada em folhas no estágio pré-colheita                     \\
+	GDS & Descoloração do Grão & Escores de 1 a 9 & Severidade do escurecimento ou manchas nos grãos, causada por vários fungos, avaliada nas glumas no estágio pré-colheita \\* \bottomrule
+\end{longtable}

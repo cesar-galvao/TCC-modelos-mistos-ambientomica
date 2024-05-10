@@ -1,0 +1,432 @@
+\documentclass[12pt, a4paper, twoside]{report}
+\usepackage[left = 3cm, top = 3cm, right = 2cm, bottom = 2cm]{geometry}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc} %brazilian pt hyphenation
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\numberwithin{equation}{subsection} %subsection
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{titletoc,titlesec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{natbib}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+%\usepackage[brazilian,hyperpageref]{backref}
+%\usepackage[alf]{abntex2cite}
+\usepackage{multirow} % https://www.ctan.org/pkg/multirow
+\usepackage{float} % https://www.ctan.org/pkg/float
+\usepackage{booktabs} % https://www.ctan.org/pkg/booktabs
+\usepackage{enumitem} % https://www.ctan.org/pkg/enumitem
+\usepackage{quoting} % https://www.ctan.org/pkg/quoting
+\usepackage{epigraph}
+\usepackage{anyfontsize}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{bm}
+%\usepackage{tocbibind}
+\usepackage[titletoc,page]{appendix}
+\usepackage{url,hyperref}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{bbm}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{afterpage}
+\usepackage{makecell} % Para usar \thead
+\usepackage{tabularx} % Para usar o ambiente tabularx
+\usepackage{adjustbox} % Para ajustar a largura da tabela
+\usepackage{pdflscape} % Para usar o ambiente landscape
+\usepackage{caption} % Para personalizar a legenda
+\renewcommand{\arraystretch}{1.5} % Ajusta o espaçamento entre as linhas
+\usepackage{float}
+\usepackage{longtable}
+
+
+
+%\usepackage[style=abnt]{biblatex}
+%\bibliographystyle{plainnat}
+\raggedbottom % https://latexref.xyz/_005craggedbottom.html
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{lema}[teo]{Lema}
+\newtheorem{cor}[teo]{Corolário}
+\newtheorem{prop}[teo]{Proposição}
+\newtheorem{defi}{Definição}
+\newtheorem{exem}{Exemplo}
+
+\newcommand{\titulo}{Modelos mistos aplicados à recomendação de cultivares no contexto da ambientômica}
+\newcommand{\autor}{César Augusto Galvão}
+\newcommand{\orientador}{ Prof. Dr. Leandro T. Correia}
+\newcommand{\coorientador}{ Prof(a). Rafael T. Tassinari}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{16pt}
+%C - Centro, L - Esquerda, R - Direita, O - impar, E - par
+\fancyhead[RO, LE]{\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+\titlecontents{section}[0cm]{}{\bf\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\titlecontents{subsection}[0.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+
+\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{2}
+
+\DeclareCaptionFormat{myformat}{\centering \fontsize{10}{12}\selectfont#1#2#3}
+\captionsetup{format=myformat}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\begin{figure}[h!]
+	\centering
+		\includegraphics[scale = 0.8]{unb.png}
+	\label{fig:unb}
+\end{figure}
+{\bf Universidade de Brasília \\
+\bf Departamento de Estatística}
+\vspace{5cm}
+
+\setcounter{page}{0}
+\null
+\textbf{\titulo}
+\vspace{2.5cm}
+
+
+\vspace{0.2cm}
+\textbf{\autor}
+\end{center}
+\vspace{1.5cm}
+
+\begin{flushright}
+\begin{minipage}{7.5cm}
+\parbox[t]{7.5cm}{Relatório apresentado para o Departamento de Estatística da Universidade de Brasília como parte dos requisitos necessários para obtenção do grau de Bacharel em Estatística.}
+\end{minipage}
+\end{flushright}
+
+\vspace{5cm}
+
+\begin{center}
+{\bf{Brasília} \\ }
+\bf{2024}
+\end{center}
+
+\end{titlepage}
+
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{\autor} \\
+\vspace{5cm}
+\textbf{\titulo} \\
+\vspace{3cm}
+\small
+Orientador: \orientador
+Coorientador(a): \coorientador
+\end{center}
+
+
+\vspace*{3cm}
+
+\begin{flushright}
+\begin{minipage}{7.5cm}
+ \parbox[t]{7.5cm}{Relatório apresentado para o Departamento de Estatística da Universidade de Brasília como parte dos requisitos necessários para obtenção do grau de Bacharel em Estatística.}
+\end{minipage}
+\end{flushright}
+
+\vspace{5cm}
+
+\begin{center}
+{\bf{Brasília} \\ }
+\bf{2024}
+\end{center}
+
+
+\pagenumbering{gobble}
+%\setcounter{page}{2}
+\onehalfspacing
+
+
+
+
+\setlength{\parindent}{1.5cm}
+\setlength{\parskip}{0.2cm}
+\setlength{\intextsep}{0.5cm}
+
+\titlespacing*{\section}{0cm}{0cm}{0.5cm}
+\titlespacing*{\subsection}{0cm}{0.5cm}{0.5cm}
+\titlespacing*{\subsubsection}{0cm}{0.5cm}{0.5cm}
+\titlespacing*{\paragraph}{0cm}{0.5cm}{0.5cm}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+
+
+\fancyhead[RE, LO]{\nouppercase{\emph\leftmark}}
+%\fancyfoot[C]{Departamento de Estatística}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		Dedicatória			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%``exemplo"
+
+%\vspace*{13cm}
+
+%\hfill{\begin{minipage}{10.4cm}
+%incluir dedicatória (opcional)
+
+%\end{minipage}}
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		Agradecimentos			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\vspace*{2.5cm}
+
+\begin{center}
+ {\Huge \bfseries Agradecimentos}
+\end{center}
+\baselineskip 19.5pt 
+\vspace*{1.5cm}
+
+% bahia, gabriela, tassinari, Leandro, meu pai, unb, educação pública, Enap, os funcionários de serviços auxiliares da unb em especial o RU e a mim mesmo, embrapa à Embrapa Arroz e Feijão e em especial ao Dr. Flávio Breseghello  por ceder o banco de dados para nossas análises.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		Resumo			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{2.5cm}
+\begin{center}
+ {\Huge \bfseries Resumo}
+\end{center}
+\baselineskip 19.5pt 
+\vspace*{1.5cm}
+
+asdf
+
+\vspace*{1.5cm}
+
+Palavras-chaves: asdf
+
+  
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		Tabelas/Figuras			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listoftables
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+%Sumário
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{8}
+
+\chapter{Introdução}
+
+\section{Motivação}
+
+A domesticação de espécies silvestres de plantas para a agricultura é uma prática antiga e passou por diversas revoluções até os dias atuais, em que a genética biométrica e o melhoramento de precisão protagonizam a criação de cultivares e seleção de características de interesse \cite{melhora_precisa1}. Além disso, pressões como crescimento populacional \cite{hickey2019breeding}, redução de recursos naturais disponíveis, aquecimento global e uma variedade de consequências desses fatores \cite{jorasch2019} aumentam a necessidade de se produzir alimentos e outros recursos vegetais de forma incrementalmente eficiente. Uma das soluções para isso é justamente o melhoramento de precisão.
+
+Neste contexto, o desenvolvimento e seleção de cultivares é associado a identificação de grupos ambientais (\textit{Target Population of Environments} ou TPE), permitindo que se aproveite ao máximo a característica de interesse \cite{chenu2015characterizing}. De fato, em posse da informação de que o ambiente em que a planta se desenvolve interfere em seu fenótipo (a característica de interesse, que é uma expressão gênica), cabe estudar a interação genótipos $\times$ ambientes ($G \times E$).
+
+O estudo desse tipo de relação é potencializado com o uso de técnicas de Sistemas de Informações Geográficas -- SIG, como sensoriamento remoto, entre outros \cite{melhora_precisa1}. A disponibilização pública de dados coletados via satélite com diversos graus de granularidade permite a inclusão de mais covariáveis ambientais como área cultivada, cobertura vegetal, temperatura, entre outros dados geofísicos\footnote{Por exemplo, o serviço Google Earth Engine disponibiliza seu catálogo em https://developers.google.com/earth-engine/datasets/}.
+
+A proposta de \citep{resende2020enviromics}, que será usada de estudo de caso, é expandir o uso de TPE para um estudo ômico do ambiente, daí \textit{ambientômica}. Os autores propõem o uso de modelos hierárquicos, e o conceito de ambientipagem, resultante de agrupamentos ambientais, para predição de performance de genótipos não observados. Isto permite, por exemplo, recomendar o melhor genótipo de um determinado cultivar para uma região em que jamais foi cultivado e assim tornar a região produtiva.
+
+\section{Objetivos}
+
+O objetivo geral deste trabalho de conclusão de curso é estudar o uso de modelos lineares hierárquicos (ou mistos) para recomendação de genótipos de um determinado cultivar em uma região delimitada e ambientipada, isto é, com dados sobre a maior quantidade de características ambientais possível. Pretende-se revisar metodologicamente o estudo de \citep{resende2020enviromics}, detalhando o processo de modelagem e sua adequação, bem como comparar computacionalmente variações do modelo utilizado.
+
+ 
+Os objetivos específicos são:
+
+  \begin{itemize}
+  \item Explorar a técnica de modelagem estatística via modelos lineares hierárquicos incluindo efeitos aleatórios;
+  \item Explorar os conceitos necessários para aplicação do modelo ao contexto de melhoramento de plantas e ambientômica;
+  \item Comparar a adequação do modelo original dos autores com um modelo que faça composição de marcadores ambientômicos utilizando técnicas de redução de dimensionalidade.
+  % REVISAR AQUI SE EU FOR COMPARAR O DESEMPENHO DOS MODELOS
+ \end{itemize}
+ 
+ \chapter{Referencial Teórico}
+ 
+ \section{Redução de dimensionalidade}
+ 
+ De acordo com \cite{morettindatasci}, técnicas de redução de dimensionalidade são utilizadas quando há um grande número de covariáveis e se deseja estudar as unidades observadas com base em sua estrutura de dependência multivariada. Dentre as técnicas disponíveis, foi escolhida a Análise de Componentes Principais (\textit{PCA} --- \textit{Principal Component Analysis}), que busca expressar as covariáveis originais em termos de outras variáveis não correlacionadas e que resumam as informações contidas em um conjunto de variáveis. Em outras palavras, ``as $p$ covariáveis originais $(X_1, \dots , X_p)$ são transformadas em $p$ componentes princiais não correlacionadas $(Y_1, \dots, Y_p)$ de modo que $Y_1$ é aquela que explica a maior parcela da variabilidade total dos dados originais, $Y_2$ explica a segunda maior parcila e assim por diante'' \citep{metodosmultivariados_artes}. 
+ 
+Considerando $\boldsymbol{x}$ o vertor de covariáveis originais $\boldsymbol{x}^\top = (X_1, \dots, X_p)$ e $\text{Cov}(x) = \boldsymbol{\Sigma}$, as componentes principais são obtidas pela decomposição espectral da matriz de covariâncias: $\boldsymbol{\Sigma} = \boldsymbol{\Gamma \Lambda \Gamma}^\top$. Dessa forma $\boldsymbol{\Lambda}$ é uma matriz diagonal dos autovalores e $\boldsymbol{\Gamma}$ é uma matriz ortogonal (portanto $\boldsymbol{\Gamma \Gamma}^\top = \boldsymbol{I}$) dos autovetores de $\boldsymbol{\Sigma}$. Obtém-se daí os pares de autovalores e autovetores ortogonais normalizados $(\lambda_i, \boldsymbol{\alpha}_i), i = 1, \dots, p,$, ordenados de modo que $\lambda_1 \geq \dots \geq \lambda_p \geq 0$. Dessa forma, pode-se expressar a $i$-ésima componente principal por
+
+\begin{equation}
+	Y_i = \boldsymbol{\alpha}_i^\top \boldsymbol{x} = \alpha_{i1}X_1 + \dots + \alpha_{ip}X_p, \quad i = 1, \dots , p.
+\end{equation}
+
+Caso as covariáveis tenham variância ou valores em escalas muito discrepantes, é possível normalizá-las e obter as componentes principais a partir da matriz de correlações $\rho$ e seus pares de autovalores e autovetores $(\gamma_i, \boldsymbol{\epsilon}_i)$. As covariáveis são padronizadas utilizando
+
+\begin{align}
+	\boldsymbol{z} = \left( \boldsymbol{V}^{1/2}\right)^{-1} (\boldsymbol{x} - \boldsymbol{\mu}),
+\end{align}
+
+\noindent em que $\boldsymbol{V}^{1/2} = \text{diag}(\sigma_1, \dots, \sigma_p)$ e $\boldsymbol{\mu}$ é o vetor de médias. Agora tem-se $\text{Cov}(\boldsymbol{z}) = \rho$, a matriz de correlações para as covariáveis padronizadas. Finalmente, as componentes são dadas por
+
+\begin{align}
+	Y_i = \boldsymbol{\epsilon}_i^\top \left( \boldsymbol{V}^{1/2}\right)^{-1} (\boldsymbol{x} - \boldsymbol{\mu}).
+\end{align}
+
+A obtenção de componentes principais para o sistema garante algumas propriedades interessantes como
+
+\begin{align}
+	\sum\limits_{j = 1}^{p} \text{Var}\left( X_j \right) = \text{tr} \left( \boldsymbol{\Sigma} \right)  = \text{tr} \left( \boldsymbol{\Gamma \Lambda \Gamma^\top} \right) = \text{tr} \left( \boldsymbol{\Lambda} \right) =  \sum\limits_{i = 1}^{p} \text{Var}\left( Y_i \right).
+\end{align}
+
+\noindent Ou seja, a variância total do sistema é mantida após obtenção das componentes principais, o que também vale quando se utiliza a matriz de correlações.   
+
+Efetivamente o que será utilizado serão os estimadores amostrais para as as componentes principais, para as matrizes de covariância e correlação e seus pares de autovalores e autovetores; $\hat{Y}_i$, $\boldsymbol{S}$, $\boldsymbol{R}$ e $(\hat{\gamma}_i, \hat{\boldsymbol{\epsilon}}_i)$ respectivamente.
+
+Quando o intuito da obtenção das componentes principais é reduzir a dimensionalidade do sistema e assim manter uma quantidade menor de variáveis que explique uma parcela razoável da variância do sistema, deve-se adotar um critério de determinação do número de componentes principais a serem retidas. \cite{metodosmultivariados_artes} apresentam:
+
+\begin{itemize}
+	\item Critério de Kaiser, segundo a qual se mantém as componentes com autovalores superiores a 1 --- ou seja, componentes que explicariam mais variância do que uma covariável original individual; \\
+	\item Reter componentes que acumulem ao menos uma certa percentagem de variância explicada do total; \\
+	\item Reter componentes que acumulem ao menos uma certa percentagem da variância explicada de cada variável original.
+\end{itemize}
+
+\cite{morettindatasci} apresentam ainda a seleção baseada no fator de aceleração do teste do cotovelo (utilização do \textit{screeplot}). Considerando $af(i) = f''(i) = f(i+1) - 2f(i) - f(i-1)$, $i = 1, \dots, p-1$ o fator de aceleração, o número de fatores retidos corresponde à posição anterior em que $af(i)$ é máximo.
+
+
+
+\section{Modelos Lineares}
+
+Modelos Lineares apresentam uma relação estocástica entre duas ou mais variáveis. Sua forma simples com efeitos fixos pode ser representada da forma
+
+\begin{align}
+	y_i = \beta_0 + \sum\limits_{k = 1}^{p} \beta_k \, x_{k} + \varepsilon_i, \label{relacao_linear_basica}
+\end{align}
+
+\noindent em que $y_i$ refere-se à $i$-ésima observação de uma variável resposta, $\beta_0$ é o intercepto, $\beta_k$ são os coeficientes associados às covariáveis $x_{k}$ e $\varepsilon_i$ é um erro estocástico associado à observação. Ao final do processo de modelagem obtém-se um modelo da forma
+
+\begin{align}
+	\hat{y}_i = \hat{\beta}_0 + \sum\limits_{k = 1}^{p} \hat{\beta}_k \, x_{k}, \label{modelo_linear_basico}
+\end{align}
+
+\chapter{Metodologia}
+
+\section{Software}
+
+Para todas as análises e construção de gráficos foi utilizada a linguagem R VERSAO no ambiente de desenvolvimento RStudio VERSAO e os seguintes pacotes:
+
+\begin{itemize}
+	\item pacote1 versao
+	\item pacote2 versao
+\end{itemize}
+
+\section{Conjuntos de dados}
+
+%1995-2021
+%trial, syst, year, st, location = loc, type, desing
+%n rep, mean, rep, gen, gy
+
+O conjunto de dados experimentais utilizado foi o \textit{Embrapa Rice Breeding Dataset} (ERBD), desenvolvido e cedido pela Empresa Brasileira de Pesquisa Agropecuária (Embrapa) para pesquisas com cultivares de arroz (\textit{Oryza sativa L.}). A base de dados cedida compreende coleta de dados desde 1982, mas os dados utilizados neste trabalho compreendem apenas os anos de 1995 a 2021 por recomendação dos pesquisadores da Empresa. A base é extensamente documentada em \cite{breseghello2011} e \cite{breseghello2021} e os dicionários desses dados estão disponíveis no Apêndice, tabelas \ref{tab:dicionarioerbd1} e \ref{tab:dicionarioerbd2}.
+
+Para o conjunto de dados ambientais foram coletados dados de 393 covariáveis, das quais 19 são oriundas do repositório WorldClim, 130 do NasaPower e 244 do SoilGrids. Todos os dados ambientais advém de medições via satélite e foram obtidos mediante consulta às API (\textit{Application Programming Interface}) disponibilizadas pelas organizações. O dicionário de dados contendo a fonte e definição de todas as 393 covariaveis está disponível no Apêndice, tabela \ref{tab:dicionarioambientais}.  As três fontes são descritas a seguir:
+
+A \textit{SoilGrids} \footnote{https://www.isric.org/explore/soilgrids} é um projeto da \textit{International Soil Reference and Information Centre} é um sistema para mapeamento digital do solo e faz predições  para as suas distribuições de forma global. Suas variáveis são dadas em termos de distribuições para seis horizontes de profundidade no solo e alguns de seus quantis.
+
+\textit{NASAPOWER} (\textit{Prediction Of Worldwide Energy Resources})\footnote{https://power.larc.nasa.gov/} é um projeto que foi desenvolvido para melhorar ou criar dados de sistemas de satélites e tem três comunidades-alov: energia renovável, construções sustentáveis e agroclimatologia. Os dados utilizados são aqueles destinados ao último público.
+
+Finalmente, \textit{WorldClim}\footnote{https://www.worldclim.org/data/index.html} é uma base de dados com dados de tempo e clima de alta resolução. As variáveis são derivadas de de valores mensais de precipitação e temperatura, seja uma tendência anual ou de fatores ambientais limitantes ou extremos (em termos de temperatura, por exemplo).
+
+Os dados de satélite dessas três fontes foram coletados em 87.155 pontos em todo o país, mas não correspondem exatamente aos 149 pontos de experimento. Embora existam métodos apropriados para estimar toda a superfície do país e, em seguida, utilizar a estimação para os pontos de experimento (\cite{cokriging}), este não é o foco do estudo, nem se pretende seguir essa metodologia específica. Consequentemente, o erro de estimação das covariáveis para os pontos de experimento será ignorado. Para a interpolação das covariáveis para os pontos de experimento, optou-se por calcular a média das covariáveis dos três pontos mais próximos.
+
+
+\section{Análise Exploratória}
+
+Não há dados de parentalidade, então não conseguimos usar dados de pedigree. a variável de agrupamento utilizada será o próprio genótipo
+
+Podemos analisar:
+
+Ambiente
+Genótipos
+Marcadores ambientômicos
+
+MONTAR CLUSTERS DE REGIÕES DO BRASIL DE ACORDO COM AS VARIÁVEIS AMBIENTAIS
+
+\section{Modelagem}
+
+\subsection{Modelos Mistos}
+
+Motivo do uso de modelos mistos
+Descrição do que é o modelo linear misto, suas características, método de estimação, forma de aproximação numérica no R,
+
+\subsection{Redução de dimensionalidade}
+
+Descrição da redução de dimensionalidade
+
+\subsection{Montagem dos Marcadores Ambientômicos}
+
+MONTAR OS INDICADORES AMBIENTOMICOS, MAS INCLUINDO TAMBÉMA CLUSTERIZAÇÃO DAS REGIÕES DO BRASIL DE ACORDO COM AS VARIÁVEIS AMBIENTAIS
+
+falar das simulacoes
+
+O modelo do Tassinari e a probabilidade de selecionar cada uma das covariáveis para o modelo.
+
+
+\chapter{Resultados}
+
+análise exploratória, ambiente, genótipos, marcadores ambientômicos, modelo e desempenho
+
+\section{Análise Exploratória}
+
+\section{Composição dos Marcadores Ambientômicos}
+
+\section{Modelo Misto}
+
+\chapter{Conclusões}
+
+
+
+\newpage
+
+% REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{chapter}{\textbf{Referências}}
+\bibliographystyle{bbs2}
+\bibliography{biblio}
+
+% APENDICE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\textbf{Apêndice}}
+
+\input{Apendice.tex}
+
+\end{document}
+

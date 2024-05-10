@@ -1,0 +1,35 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+
+
+% Structure of the metadata related to field trials included in the Embrapa Rice Breeding Dataset.
+
+\section{Dicionário de variáveis do ERBD relacionadas aos ensaios}\label{sec: dicionario-erbd1}
+
+\begin{longtable}{@{} p{4cm} p{4cm} p{8cm} @{}} 
+	\caption{Dicionário de variáveis do ERBD relacionadas aos ensaios}
+	\toprule
+	\textbf{Variável} & \textbf{Nome}                    & \textbf{Detalhes}                                                           \\* \midrule
+	\endfirsthead
+	%
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	TRIAL                & Código do ensaio        & String único que identifica o ensaio                               \\
+	SYST   & Sistema de cultivo           & Indica tanto o subprograma de melhoramento quanto o ambiente do ensaio. Níveis: Irrigado ou de Sequeiro            \\
+	YEAR                 & Ano do ensaio           & Ano de preparação do ensaio. Ex: 2005: temporada 2005/2006         \\
+	DATE                 & Data de plantio         & Dia de plantio de sementes secas. Formato DD/MM/AAAA               \\
+	ST                   & Estado do Brasil        & Estado do Brasil onde o ensaio foi conduzido                       \\
+	LOCATION             & Local de plantio        & Nome do município onde o ensaio foi conduzido                      \\
+	LOC                  & Local de plantio        & Termo abreviado que indica o município                             \\
+	TYPE   & Tipo de ensaio               & Tipo de ensaio. ER: Ensaios Regionais de Rendimento; VCU: Valor de Cultivo e Uso (Ensaios Avançados de Rendimento) \\
+	DESIGN & Desenho Experimental         & O desenho estatístico do ensaio. RCB: delineamento de blocos completos ao acaso; LAT: delineamento em látice       \\
+	MEAN   & Média de rendimento de grãos & Média geral do ensaio do rendimento de grãos (kg ha$^{-1}$)                                       \\
+	H\textasciicircum{}2 & Hereditariedade         & Hereditariedade de sentido amplo do rendimento de grãos            \\
+	CV                   & Coeficiente de Variação & Coeficiente de variação experimental para rendimento de grãos (\%) \\* \bottomrule
+\end{longtable}
