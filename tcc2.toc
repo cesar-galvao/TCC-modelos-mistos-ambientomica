@@ -3,19 +3,25 @@
 \contentsline {section}{\numberline {1.1}Motivação}{8}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Objetivos}{9}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Referencial Teórico}{10}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Redução de dimensionalidade}{10}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Metodologia}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Software}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conjuntos de dados}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Análise Exploratória}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Modelagem}{15}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Modelos Mistos}{15}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Redução de dimensionalidade}{15}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Montagem dos Marcadores Ambientômicos}{15}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Resultados}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Análise Exploratória}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Composição dos Marcadores Ambientômicos}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Modelo Misto}{16}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusões}{17}{chapter.5}%
-\contentsline {chapter}{\textbf {Referências}}{18}{chapter.5}%
+\contentsline {section}{\numberline {2.1}Análise de Agrupamentos}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Redução de dimensionalidade}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Modelos Lineares}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Modelos Lineares Hierárquicos}{13}{subsection.2.3.1}%
+\contentsline {chapter}{\numberline {3}Metodologia}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Conjuntos de dados}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Software}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Análise Exploratória}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Análise de Agrupamentos}{16}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Redução de dimensionalidade}{16}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Modelagem}{16}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Modelos Mistos}{16}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Montagem dos Marcadores Ambientômicos}{16}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Análise Exploratória}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Agrupamentos}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Redução de Dimensionalidade}{17}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Composição dos Marcadores Ambientômicos}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Modelo Misto}{17}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusões}{18}{chapter.5}%
+\contentsline {chapter}{\textbf {Referências}}{19}{chapter.5}%
 \contentsfinish 

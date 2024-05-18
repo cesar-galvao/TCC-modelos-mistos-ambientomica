@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.4.23)  10 MAY 2024 08:39
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.4.23)  13 MAY 2024 16:27
  restricted system commands enabled.
 **tcc2.tex
 (./tcc2.tex
@@ -787,30 +787,30 @@ Inserting `l3color' in `luaotfload.parse_color'.
 ) (./tcc2.aux)
 \openout1 = tcc2.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 87.
  (/home/cesaragalvao/.TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -852,7 +852,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/home/cesaragalvao/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 86.
+Package hyperref Info: Link coloring ON on input line 87.
  (./tcc2.out) (./tcc2.out)
 \@outlinefile=\write4
 
@@ -865,47 +865,47 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<unb.png, id=82, 99.37125pt x 52.195pt>
+<unb.png, id=106, 99.37125pt x 52.195pt>
 File: unb.png Graphic file (type png)
 <use unb.png>
-Package luatex.def Info: unb.png  used on input line 92.
+Package luatex.def Info: unb.png  used on input line 93.
 (luatex.def)             Requested size: 79.4971pt x 41.75604pt.
 
-Underfull \hbox (badness 1960) in paragraph at lines 112--112
+Underfull \hbox (badness 1960) in paragraph at lines 113--113
 \T1/lmr/m/n/12 mento de Es-tatís-tica da Uni-ver-si-dade
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 112--112
+Underfull \hbox (badness 1406) in paragraph at lines 113--113
 \T1/lmr/m/n/12 de Brasília como parte dos req-ui-si-tos
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 112--112
+Underfull \hbox (badness 1226) in paragraph at lines 113--113
 \T1/lmr/m/n/12 necessários para obtenção do grau de
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 113.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 114.
 (/home/cesaragalvao/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 113.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 114.
  (/home/cesaragalvao/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [0
 
 {/home/cesaragalvao/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./unb.png>]
-Underfull \hbox (badness 1960) in paragraph at lines 142--142
+Underfull \hbox (badness 1960) in paragraph at lines 143--143
 \T1/lmr/m/n/12 mento de Es-tatís-tica da Uni-ver-si-dade
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 142--142
+Underfull \hbox (badness 1406) in paragraph at lines 143--143
 \T1/lmr/m/n/12 de Brasília como parte dos req-ui-si-tos
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 142--142
+Underfull \hbox (badness 1226) in paragraph at lines 143--143
 \T1/lmr/m/n/12 necessários para obtenção do grau de
  []
 
@@ -929,15 +929,17 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.'
 warning  (pdf backend): ignoring duplicate destination with the name 'page.'
 [5
 
-] (./tcc2.toc)
+] (./tcc2.toc
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[6
+
+])
 \tf@toc=\write7
 
 \openout7 = tcc2.toc
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.'
-[6
-
-]
+[7]
 Cap\'{\i }tulo 1.
 [8
 
@@ -946,30 +948,32 @@ Cap\'{\i }tulo 2.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 [11] [12]
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.3.1'
+[13]
 Cap\'{\i }tulo 3.
-[13
+[14
 
-] [14] [15]
+] [15] [16]
 Cap\'{\i }tulo 4.
-[16
+[17
 
 ]
 Cap\'{\i }tulo 5.
-[17
+[18
 
-] (./tcc2.bbl [18
+] (./tcc2.bbl [19
 
-]) [19] (./Apendice.tex
+]) [20] (./Apendice.tex
 Overfull \hbox (23.99997pt too wide) in alignment at lines 2--7
  [][][] 
  []
@@ -1004,7 +1008,7 @@ Overfull \hbox (23.99997pt too wide) in alignment at lines 14--30
  [][][] 
  []
 
-[20
+[21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 40--40
@@ -1111,7 +1115,7 @@ Overfull \hbox (35.99995pt too wide) in alignment at lines 48--65
  [][][][] 
  []
 
-[21]
+[22]
 Overfull \hbox (23.99997pt too wide) in alignment at lines 71--76
  [][][] 
  []
@@ -2336,19 +2340,7 @@ Overfull \hbox (23.99997pt too wide) in alignment at lines 685--1266
  [][][] 
  []
 
-[22] [23
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-] [24
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
+[23] [24
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2389,26 +2381,19 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [28
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ‰ (U+2030) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [29
 Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2439,15 +2424,24 @@ Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [31
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no ‰ (U+2030) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2463,8 +2457,6 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [33
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2497,8 +2489,8 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-] [36
 Missing character: There is no – (U+2013) in font ec-lmr12!
+] [36
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2520,12 +2512,8 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [38
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2548,7 +2536,13 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 ] [40
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2577,8 +2571,8 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-] [43
 Missing character: There is no – (U+2013) in font ec-lmr12!
+] [43
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2596,8 +2590,8 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-] [45
 Missing character: There is no – (U+2013) in font ec-lmr12!
+] [45
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
@@ -2620,31 +2614,41 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]) [61] (./tcc2.aux)
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+] [48
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]) [62] (./tcc2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `tcc2.out' has not changed.
-(rerunfilecheck)             Checksum: DE5F57E86CA7E5C1226B87CD6676B04B;2699.
+(rerunfilecheck)             Checksum: FEC7F64EE8C3531392B24C19FEA7C9F5;3728.
 )
 
 Here is how much of LuaTeX's memory you used:
- 27716 strings out of 476435
+ 27754 strings out of 476435
  745357,1977958 words of node,token memory allocated
- 714 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 7 glue, 4 kern, 1 glyph, 30 attribute, 75 glue_spec, 16 attribute_list, 2 write nodes
-   avail lists: 1:2,2:20799,3:3576,4:143,5:2574,6:1262,7:71411,8:62,9:10874,10:16,11:4339
- 48916 multiletter control sequences out of 65536+600000
+ 726 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 7 glue, 4 kern, 1 glyph, 32 attribute, 75 glue_spec, 17 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:1,2:20805,3:3576,4:164,5:2574,6:1262,7:71411,8:63,9:10874,10:16,11:4339
+ 48940 multiletter control sequences out of 65536+600000
  85 fonts using 5377751 bytes
- 105i,12n,105p,948b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,105p,948b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.5'
 {/home/cesaragalvao/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/cesaragalvao/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/cesaragalvao/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on tcc2.pdf (61 pages, 338924 bytes).
+Output written on tcc2.pdf (63 pages, 350386 bytes).
 
-PDF statistics: 529 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 131072)
- 168 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 594 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 131072)
+ 216 words of extra memory for PDF output out of 10000 (max. 100000000)
 

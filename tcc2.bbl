@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Adewale et~al.}{2007}]{adewale2007understanding}
+Adewale, A.~J., Hayduk, L., Estabrooks, C.~A., Cummings, G.~G., Midodzi, W.~K., \& Derksen, L. (2007).
+\newblock Understanding hierarchical linear models: applications in nursing research.
+\newblock {\em Nursing Research}, 56(4):S40--S46.
+
 \bibitem[\protect\astroncite{Artes e Barroso}{2023}]{metodosmultivariados_artes}
 Artes, R. \& Barroso, L.~P. (2023).
 \newblock {\em Métodos Multivariados de Análise Estatística}.
@@ -20,10 +25,20 @@ Chenu, K. (2015).
 \newblock Characterizing the crop environment -- nature, significance and applications.
 \newblock {\em Crop physiology}, pages 321--348.
 
+\bibitem[\protect\astroncite{Gelman e Hill}{2006}]{gelman_hill_2007}
+Gelman, A. \& Hill, J. (2006).
+\newblock {\em Data Analysis Using Regression and Multilevel/Hierarchical Models}.
+\newblock Analytical Methods for Social Research. Cambridge University Press.
+
 \bibitem[\protect\astroncite{Hickey et~al.}{2019}]{hickey2019breeding}
 Hickey, L.~T., N.~Hafeez, A., Robinson, H., Jackson, S.~A., Leal-Bertioli, S.~C., Tester, M., Gao, C., Godwin, I.~D., Hayes, B.~J., \& Wulff, B.~B. (2019).
 \newblock Breeding crops to feed 10 billion.
 \newblock {\em Nature biotechnology}, 37(7):744--754.
+
+\bibitem[\protect\astroncite{Hox et~al.}{2017}]{hox2017multilevel}
+Hox, J., Moerbeek, M., \& Van~de Schoot, R. (2017).
+\newblock {\em Multilevel analysis: Techniques and applications}.
+\newblock Routledge.
 
 \bibitem[\protect\astroncite{Jorasch}{2019}]{jorasch2019}
 Jorasch, P. (2019).
@@ -34,6 +49,16 @@ Jorasch, P. (2019).
 Journel, A.~G. \& Journel, A.~G. (1989).
 \newblock {\em Fundamentals of geostatistics in five lessons}, volume~8.
 \newblock American Geophysical Union Washington, DC.
+
+\bibitem[\protect\astroncite{Kutner et~al.}{2005}]{kutner2005applied}
+Kutner, M.~H., Nachtsheim, C.~J., Neter, J., \& Li, W. (2005).
+\newblock {\em Applied linear statistical models}.
+\newblock McGraw-hill.
+
+\bibitem[\protect\astroncite{McMahon e Diez}{2007}]{mcmahon2007scales}
+McMahon, S.~M. \& Diez, J.~M. (2007).
+\newblock Scales of association: hierarchical linear models and the measurement of ecological systems.
+\newblock {\em Ecology letters}, 10(6):437--452.
 
 \bibitem[\protect\astroncite{Morettin e Singer}{2022}]{morettindatasci}
 Morettin, P.~A. \& Singer, J. d.~M. (2022).

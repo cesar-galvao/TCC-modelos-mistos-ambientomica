@@ -49,6 +49,7 @@
 
 
 
+
 %\usepackage[style=abnt]{biblatex}
 %\bibliographystyle{plainnat}
 \raggedbottom % https://latexref.xyz/_005craggedbottom.html
@@ -63,7 +64,7 @@
 \newcommand{\titulo}{Modelos mistos aplicados à recomendação de cultivares no contexto da ambientômica}
 \newcommand{\autor}{César Augusto Galvão}
 \newcommand{\orientador}{ Prof. Dr. Leandro T. Correia}
-\newcommand{\coorientador}{ Prof(a). Rafael T. Tassinari}
+\newcommand{\coorientador}{ Prof(a). Dr. Rafael T. Tassinari}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -130,7 +131,7 @@
 \textbf{\titulo} \\
 \vspace{3cm}
 \small
-Orientador: \orientador
+Orientador: \orientador \\
 Coorientador(a): \coorientador
 \end{center}
 
@@ -225,7 +226,7 @@ asdf
 
 \vspace*{1.5cm}
 
-Palavras-chaves: asdf
+Palavras-chave: asdf
 
   
 \newpage
@@ -255,7 +256,7 @@ Palavras-chaves: asdf
 
 \section{Motivação}
 
-A domesticação de espécies silvestres de plantas para a agricultura é uma prática antiga e passou por diversas revoluções até os dias atuais, em que a genética biométrica e o melhoramento de precisão protagonizam a criação de cultivares e seleção de características de interesse \cite{melhora_precisa1}. Além disso, pressões como crescimento populacional \cite{hickey2019breeding}, redução de recursos naturais disponíveis, aquecimento global e uma variedade de consequências desses fatores \cite{jorasch2019} aumentam a necessidade de se produzir alimentos e outros recursos vegetais de forma incrementalmente eficiente. Uma das soluções para isso é justamente o melhoramento de precisão.
+A domesticação de espécies silvestres de plantas para a agricultura é uma prática antiga e passou por diversas revoluções até os dias atuais, em que a genética biométrica e o melhoramento de precisão protagonizam a criação de cultivares e seleção de características de interesse \cite{melhora_precisa1}. Além disso, pressões como crescimento populacional \citep{hickey2019breeding}, redução de recursos naturais disponíveis, aquecimento global e uma variedade de consequências desses fatores \citep{jorasch2019} aumentam a necessidade de se produzir alimentos e outros recursos vegetais de forma incrementalmente eficiente. Uma das soluções para isso é justamente o melhoramento de precisão.
 
 Neste contexto, o desenvolvimento e seleção de cultivares é associado a identificação de grupos ambientais (\textit{Target Population of Environments} ou TPE), permitindo que se aproveite ao máximo a característica de interesse \cite{chenu2015characterizing}. De fato, em posse da informação de que o ambiente em que a planta se desenvolve interfere em seu fenótipo (a característica de interesse, que é uma expressão gênica), cabe estudar a interação genótipos $\times$ ambientes ($G \times E$).
 
@@ -274,10 +275,15 @@ Os objetivos específicos são:
   \item Explorar a técnica de modelagem estatística via modelos lineares hierárquicos incluindo efeitos aleatórios;
   \item Explorar os conceitos necessários para aplicação do modelo ao contexto de melhoramento de plantas e ambientômica;
   \item Comparar a adequação do modelo original dos autores com um modelo que faça composição de marcadores ambientômicos utilizando técnicas de redução de dimensionalidade.
-  % REVISAR AQUI SE EU FOR COMPARAR O DESEMPENHO DOS MODELOS
  \end{itemize}
  
+ 
+ % REFERENCIAL TEÓRICO
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
  \chapter{Referencial Teórico}
+ 
+ \section{Análise de Agrupamentos}
  
  \section{Redução de dimensionalidade}
  
@@ -327,32 +333,91 @@ Quando o intuito da obtenção das componentes principais é reduzir a dimension
 
 Modelos Lineares apresentam uma relação estocástica entre duas ou mais variáveis. Sua forma simples com efeitos fixos pode ser representada da forma
 
-\begin{align}
-	y_i = \beta_0 + \sum\limits_{k = 1}^{p} \beta_k \, x_{k} + \varepsilon_i, \label{relacao_linear_basica}
-\end{align}
-
-\noindent em que $y_i$ refere-se à $i$-ésima observação de uma variável resposta, $\beta_0$ é o intercepto, $\beta_k$ são os coeficientes associados às covariáveis $x_{k}$ e $\varepsilon_i$ é um erro estocástico associado à observação. Ao final do processo de modelagem obtém-se um modelo da forma
+PASSAR A NOTAÇÃO PARA MATRICIAL
 
 \begin{align}
-	\hat{y}_i = \hat{\beta}_0 + \sum\limits_{k = 1}^{p} \hat{\beta}_k \, x_{k}, \label{modelo_linear_basico}
+	\boldsymbol{Y} = \boldsymbol{X \beta + \varepsilon} \label{relacao_linear_basica}
 \end{align}
+
+\noindent em que $\boldsymbol{Y}$ é o vetor da variável resposta, $\boldsymbol{\beta}$ é o vetor de coeficientes associados às covariáveis $\boldsymbol{X} = \left( \boldsymbol{X}_1, \dots, \boldsymbol{X}_p \right)^\top$ e $\boldsymbol{\varepsilon}$ é o vetor de erros estocásticos associado às observações. Ao final do processo de modelagem obtém-se um modelo da forma
+
+
+\begin{align}
+	\hat{\boldsymbol{Y}} = \boldsymbol{X \hat{\beta}}, \label{modelo_linear_basico}
+\end{align}
+
+\noindent em que $\hat{\boldsymbol{\beta}}$ são estimadores obtidos pelo método de mínimos quadrados ordinários ou máxima verossimilhança para $\boldsymbol{\beta}$ \citep{kutner2005applied}.
+
+Este modelo de regressão, que também pode ser chamado de \textit{modelo de efeitos fixos}, exige uma série de suposições a respeito da componente aleatória que são avaliadas na etapa diagnóstica da modelagem como heteroscedasticidade, independência e distribuição Normal. Caso uma ou mais suposições não possam ser verificadas, se observe colinearidade entre as covariáveis do modelo, pontos de alavancagem ruins, ou outros comprometimentos do modelo, recorre-se a  transformações, redução de dimensionalidade, entre outros. Essas medidas, assim como variáveis que indiquem grupos aos quais as observações pertencem, dados categóricos, entre outros, comumente aumentam a complexidade da interpretação do modelo e exigem tratamentos inferenciais diferentes \citep{hox2017multilevel}.
+
+
+\subsection{Modelos Lineares Hierárquicos}
+
+REVISAR TODA ESSA SEÇÃO COM DEMIDENKO + CADERNOS UFV
+
+Frequentemente pesquisas em domínios variados do conhecimento estudam fenômenos em que as unidades de análise são agregadas em categorias \citep{adewale2007understanding, mcmahon2007scales}. Em alguns casos, as unidades são aninhadas em um ou mais níveis de categorias. Esses diferentes níveis de análise, indivíduos ou grupos, e suas características ou intervenções sobre níveis diferentes requerem diferentes formas de representação e técnicas de inferência que comportem adequadamente as estruturas de covariância envolvidas.
+
+Modelos multinível substituem duas práticas comuns na utilização de regressões lineares: transformação de variáveis categóricas em variáveis binárias (*dummy*) e planificação do nível de análise, ou seja, utilização de medidas de grupos e indivíduos como descritores diretos da unidade de análise. A utilização de um modelo multinível permite a construção de estimadores que contornam essas estratégias e representam melhor indivíduos e grupos no contexto de suas características \citep{hox2017multilevel, gelman_hill_2007}. Esse tipo de modelo linear pode ser representado na forma
+
+
+\begin{align}
+	y_{ij} = \beta_{0j} + \sum\limits_{k = 1}^{p} \beta_{kj} \, x_{ik} + \varepsilon_{ij}, \label{213}
+\end{align}
+%
+%\noindent em que $y_{ij}$ é a variável resposta a nível de indivíduo, $\beta_{0j}$ é o intercepto para o grupo $j = 1, 2, \dots, J$ a que esse indivíduo pertence, $\beta_{kj}$ são os coeficientes para cada covariável de nível individual $x_{ik}, k = 0, 1, \dots, K$ e $\varepsilon_{ij} \overset{iid}{\sim} N(0, \sigma^2_\varepsilon)$ é a componente aleatória para indivíduos.
+%
+%No entanto, $\boldsymbol{\beta}$ é estimado a partir das covariáveis de nível superior. Se considerarmos apenas um nível, cada $\beta_{kj}$ é expresso por
+%
+%
+%\begin{align}
+%	\beta_{kj} & = \gamma_{k0} + \sum\limits_{l = 1}^{L} \gamma_{klj} \, z_{lj} + u_{kj}, \quad l = 1, 2, \dots, L \label{214}
+%\end{align}
+%
+%
+%\noindent em que $\gamma_{k0}$ é o componente fixo, $\gamma_{klj}$ é o coeficiente para cada covariável $z_{l(.)}$ de nível superior $j$ e $u_{kj} \overset{iid}{\sim} N(0, \sigma^2_{u_{kj}})$ é a componente aleatória de cada $\beta_{k(.)}$ do grupo $j$. Uma propriedade deste tipo de modelo é que $E(\gamma_{klj}) = 0$, de modo que é possível depreender da equação (\ref{214}) que $\beta_{k} \sim N(0, \sigma^2_{u_{k}})$.
+%
+%Se for considerado o caso simplificado de apenas uma covariável de cada nível e substituirmos (\ref{214}) em (\label{213}), obtém-se
+%
+%
+%\begin{align}
+%	y_{ij} = \gamma_{00} + \gamma_{01}z_{1j} + \gamma_{10}x_{1ij} + \gamma_{11}z_{1j}x_{1i} + u_{1j}x_{1ij} + \varepsilon_{ij} + u_{0j}. \label{215}
+%\end{align}
+%
+%É imediato da equação (\ref{215}) que:
+%
+%
+%\begin{itemize}
+%	\item Existe um intercepto geral -- $\gamma_{00}$;
+%	\item Existem efeitos que agem exclusivamente sobre variáveis de um nível hierárquico específico -- $\gamma_{01}z_{1j}$ e $\gamma_{10}x_{1ij}$;
+%	\item Existe um efeito de mediação do comportamento do grupo sobre a unidade de observação -- $\gamma_{11}z_{1j}x_{1i}$;
+%	\item Existe uma componente de variância do grupo que incide sobre o comportamento da unidade -- $u_{1j}x_{1ij}$; e
+%	\item Existem componentes de variância entre unidades e entre grupos -- $\varepsilon_{ij}$ e $u_{0j}$ respectivamente.
+%\end{itemize}
+%
+%As componentes de variância deste modelo são obtidas a partir do modelo ajustado apenas com os interceptos \cite{hox2017multilevel} de $\varepsilon_{ij}$ e $u_{0j}$, de modo que se pode calcular a proporção de variância no segundo nível da hierarquia, entre agrupamentos. Essa estatística pode ser interpretada como uma correlação entre indivíduos de um mesmo grupo, presumidamente mais similares entre si quando comparados a outro grupo. Essa medida é chamada de correlação intraclasse e, para o caso de apenas dois níveis, é dada por
+%
+%
+%\begin{align}
+%	\rho = \frac{\sigma^2_{u_0}}{\sigma^2_{u_0}+\sigma^2_{\varepsilon}}. \label{224}
+%\end{align}
+
+
+
 
 \chapter{Metodologia}
 
-\section{Software}
 
-Para todas as análises e construção de gráficos foi utilizada a linguagem R VERSAO no ambiente de desenvolvimento RStudio VERSAO e os seguintes pacotes:
+COLOCAR CLUSTER REGIONAL NO MODELO HIERARQUICO
 
-\begin{itemize}
-	\item pacote1 versao
-	\item pacote2 versao
-\end{itemize}
+
 
 \section{Conjuntos de dados}
 
 %1995-2021
 %trial, syst, year, st, location = loc, type, desing
 %n rep, mean, rep, gen, gy
+% dissertação do bahia sobre o que entra como efeito aleatório
+% inserir cluster como agrupamento
 
 O conjunto de dados experimentais utilizado foi o \textit{Embrapa Rice Breeding Dataset} (ERBD), desenvolvido e cedido pela Empresa Brasileira de Pesquisa Agropecuária (Embrapa) para pesquisas com cultivares de arroz (\textit{Oryza sativa L.}). A base de dados cedida compreende coleta de dados desde 1982, mas os dados utilizados neste trabalho compreendem apenas os anos de 1995 a 2021 por recomendação dos pesquisadores da Empresa. A base é extensamente documentada em \cite{breseghello2011} e \cite{breseghello2021} e os dicionários desses dados estão disponíveis no Apêndice, tabelas \ref{tab:dicionarioerbd1} e \ref{tab:dicionarioerbd2}.
 
@@ -364,7 +429,17 @@ A \textit{SoilGrids} \footnote{https://www.isric.org/explore/soilgrids} é um pr
 
 Finalmente, \textit{WorldClim}\footnote{https://www.worldclim.org/data/index.html} é uma base de dados com dados de tempo e clima de alta resolução. As variáveis são derivadas de de valores mensais de precipitação e temperatura, seja uma tendência anual ou de fatores ambientais limitantes ou extremos (em termos de temperatura, por exemplo).
 
-Os dados de satélite dessas três fontes foram coletados em 87.155 pontos em todo o país, mas não correspondem exatamente aos 149 pontos de experimento. Embora existam métodos apropriados para estimar toda a superfície do país e, em seguida, utilizar a estimação para os pontos de experimento (\cite{cokriging}), este não é o foco do estudo, nem se pretende seguir essa metodologia específica. Consequentemente, o erro de estimação das covariáveis para os pontos de experimento será ignorado. Para a interpolação das covariáveis para os pontos de experimento, optou-se por calcular a média das covariáveis dos três pontos mais próximos.
+Os dados de satélite dessas três fontes foram coletados em 87.155 pontos em todo o país, mas não correspondem exatamente aos 149 pontos de experimento. Embora existam métodos apropriados para estimar toda a superfície do país e, em seguida, utilizar a estimação para os pontos de experimento \citep{cokriging}, este não é o foco do estudo, nem se pretende seguir essa metodologia específica. Consequentemente, o erro de estimação das covariáveis para os pontos de experimento será ignorado. Para a interpolação das covariáveis para os pontos de experimento, optou-se por calcular a média das covariáveis dos três pontos mais próximos.
+
+
+\section{Software}
+
+Para todas as análises e construção de gráficos foi utilizada a linguagem R VERSAO no ambiente de desenvolvimento RStudio VERSAO e os seguintes pacotes:
+
+\begin{itemize}
+	\item pacote1 versao
+	\item pacote2 versao
+\end{itemize}
 
 
 \section{Análise Exploratória}
@@ -377,7 +452,13 @@ Ambiente
 Genótipos
 Marcadores ambientômicos
 
+\section{Análise de Agrupamentos}
+
 MONTAR CLUSTERS DE REGIÕES DO BRASIL DE ACORDO COM AS VARIÁVEIS AMBIENTAIS
+
+\subsection{Redução de dimensionalidade}
+
+Descrição da redução de dimensionalidade
 
 \section{Modelagem}
 
@@ -386,9 +467,6 @@ MONTAR CLUSTERS DE REGIÕES DO BRASIL DE ACORDO COM AS VARIÁVEIS AMBIENTAIS
 Motivo do uso de modelos mistos
 Descrição do que é o modelo linear misto, suas características, método de estimação, forma de aproximação numérica no R,
 
-\subsection{Redução de dimensionalidade}
-
-Descrição da redução de dimensionalidade
 
 \subsection{Montagem dos Marcadores Ambientômicos}
 
@@ -399,11 +477,18 @@ falar das simulacoes
 O modelo do Tassinari e a probabilidade de selecionar cada uma das covariáveis para o modelo.
 
 
+% RESULTADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Resultados}
 
 análise exploratória, ambiente, genótipos, marcadores ambientômicos, modelo e desempenho
 
 \section{Análise Exploratória}
+
+\section{Agrupamentos}
+
+\section{Redução de Dimensionalidade}
 
 \section{Composição dos Marcadores Ambientômicos}
 
@@ -417,6 +502,8 @@ análise exploratória, ambiente, genótipos, marcadores ambientômicos, modelo 
 
 % REFERENCIAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% AJUSTAR REFERENCIAS PARA MODELO ABNT
 
 \addcontentsline{toc}{chapter}{\textbf{Referências}}
 \bibliographystyle{bbs2}
