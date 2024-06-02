@@ -289,19 +289,19 @@ Os objetivos específicos são:
  
  De acordo com \cite{morettindatasci}, técnicas de redução de dimensionalidade são utilizadas quando há um grande número de covariáveis e se deseja estudar as unidades observadas com base em sua estrutura de dependência multivariada. Dentre as técnicas disponíveis, foi escolhida a Análise de Componentes Principais (\textit{PCA} --- \textit{Principal Component Analysis}), que busca expressar as covariáveis originais em termos de outras variáveis não correlacionadas e que resumam as informações contidas em um conjunto de variáveis. Em outras palavras, ``as $p$ covariáveis originais $(X_1, \dots , X_p)$ são transformadas em $p$ componentes princiais não correlacionadas $(Y_1, \dots, Y_p)$ de modo que $Y_1$ é aquela que explica a maior parcela da variabilidade total dos dados originais, $Y_2$ explica a segunda maior parcila e assim por diante'' \citep{metodosmultivariados_artes}. 
  
-Considerando $\boldsymbol{x}$ o vertor de covariáveis originais $\boldsymbol{x}^\top = (X_1, \dots, X_p)$ e $\text{Cov}(x) = \boldsymbol{\Sigma}$, as componentes principais são obtidas pela decomposição espectral da matriz de covariâncias: $\boldsymbol{\Sigma} = \boldsymbol{\Gamma \Lambda \Gamma}^\top$. Dessa forma $\boldsymbol{\Lambda}$ é uma matriz diagonal dos autovalores e $\boldsymbol{\Gamma}$ é uma matriz ortogonal (portanto $\boldsymbol{\Gamma \Gamma}^\top = \boldsymbol{I}$) dos autovetores de $\boldsymbol{\Sigma}$. Obtém-se daí os pares de autovalores e autovetores ortogonais normalizados $(\lambda_i, \boldsymbol{\alpha}_i), i = 1, \dots, p,$, ordenados de modo que $\lambda_1 \geq \dots \geq \lambda_p \geq 0$. Dessa forma, pode-se expressar a $i$-ésima componente principal por
+Considerando $\mathbf{x}$ o vertor de covariáveis originais $\mathbf{x}^\top = (X_1, \dots, X_p)$ e $\text{Cov}(x) = \boldsymbol{\Sigma}$, as componentes principais são obtidas pela decomposição espectral da matriz de covariâncias: $\boldsymbol{\Sigma} = \boldsymbol{\Gamma \Lambda \Gamma}^\top$. Dessa forma $\boldsymbol{\Lambda}$ é uma matriz diagonal dos autovalores e $\boldsymbol{\Gamma}$ é uma matriz ortogonal (portanto $\boldsymbol{\Gamma \Gamma}^\top = \mathbf{I}$) dos autovetores de $\boldsymbol{\Sigma}$. Obtém-se daí os pares de autovalores e autovetores ortogonais normalizados $(\lambda_i, \boldsymbol{\alpha}_i), i = 1, \dots, p,$, ordenados de modo que $\lambda_1 \geq \dots \geq \lambda_p \geq 0$. Dessa forma, pode-se expressar a $i$-ésima componente principal por
 
 \begin{equation}
-	Y_i = \boldsymbol{\alpha}_i^\top \boldsymbol{x} = \alpha_{i1}X_1 + \dots + \alpha_{ip}X_p, \quad i = 1, \dots , p.
+	Y_i = \boldsymbol{\alpha}_i^\top \mathbf{x} = \alpha_{i1}X_1 + \dots + \alpha_{ip}X_p, \quad i = 1, \dots , p.
 \end{equation}
 
 Caso as covariáveis tenham variância ou valores em escalas muito discrepantes, é possível normalizá-las e obter as componentes principais a partir da matriz de correlações $\rho$ e seus pares de autovalores e autovetores $(\gamma_i, \boldsymbol{\epsilon}_i)$. As covariáveis são padronizadas utilizando
 
 \begin{align}
-	\boldsymbol{z} = \left( \boldsymbol{V}^{1/2}\right)^{-1} (\boldsymbol{x} - \boldsymbol{\mu}),
+	\mathbf{z} = \left( \mathbf{V}^{1/2}\right)^{-1} (\mathbf{x} - \boldsymbol{\mu}),
 \end{align}
 
-\noindent em que $\boldsymbol{V}^{1/2} = \text{diag}(\sigma_1, \dots, \sigma_p)$ e $\boldsymbol{\mu}$ é o vetor de médias. Agora tem-se $\text{Cov}(\boldsymbol{z}) = \rho$, a matriz de correlações para as covariáveis padronizadas. Finalmente, as componentes são dadas por
+\noindent em que $\mathbf{V}^{1/2} = \text{diag}(\sigma_1, \dots, \sigma_p)$ e $\boldsymbol{\mu}$ é o vetor de médias. Agora tem-se $\text{Cov}(\mathbf{z}) = \rho$, a matriz de correlações para as covariáveis padronizadas. Finalmente, as componentes são dadas por
 
 \begin{align}
 	Y_i = \boldsymbol{\epsilon}_i^\top \left( \boldsymbol{V}^{1/2}\right)^{-1} (\boldsymbol{x} - \boldsymbol{\mu}).
@@ -315,7 +315,7 @@ A obtenção de componentes principais para o sistema garante algumas propriedad
 
 \noindent Ou seja, a variância total do sistema é mantida após obtenção das componentes principais, o que também vale quando se utiliza a matriz de correlações.   
 
-Efetivamente o que será utilizado serão os estimadores amostrais para as as componentes principais, para as matrizes de covariância e correlação e seus pares de autovalores e autovetores; $\hat{Y}_i$, $\boldsymbol{S}$, $\boldsymbol{R}$ e $(\hat{\gamma}_i, \hat{\boldsymbol{\epsilon}}_i)$ respectivamente.
+Efetivamente o que será utilizado serão os estimadores amostrais para as as componentes principais, para as matrizes de covariância e correlação e seus pares de autovalores e autovetores; $\hat{Y}_i$, $\mathbf{S}$, $\mathbf{R}$ e $(\hat{\gamma}_i, \hat{\boldsymbol{\epsilon}}_i)$ respectivamente.
 
 Quando o intuito da obtenção das componentes principais é reduzir a dimensionalidade do sistema e assim manter uma quantidade menor de variáveis que explique uma parcela razoável da variância do sistema, deve-se adotar um critério de determinação do número de componentes principais a serem retidas. \cite{metodosmultivariados_artes} apresentam:
 
@@ -333,17 +333,15 @@ Quando o intuito da obtenção das componentes principais é reduzir a dimension
 
 Modelos Lineares apresentam uma relação estocástica entre duas ou mais variáveis. Sua forma simples com efeitos fixos pode ser representada da forma
 
-PASSAR A NOTAÇÃO PARA MATRICIAL
-
 \begin{align}
-	\boldsymbol{Y} = \boldsymbol{X \beta + \varepsilon} \label{relacao_linear_basica}
+	\mathbf{Y} = \mathbf{X} \boldsymbol{\beta + \varepsilon} \label{relacao_linear_basica}
 \end{align}
 
-\noindent em que $\boldsymbol{Y}$ é o vetor da variável resposta, $\boldsymbol{\beta}$ é o vetor de coeficientes associados às covariáveis $\boldsymbol{X} = \left( \boldsymbol{X}_1, \dots, \boldsymbol{X}_p \right)^\top$ e $\boldsymbol{\varepsilon}$ é o vetor de erros estocásticos associado às observações. Ao final do processo de modelagem obtém-se um modelo da forma
+\noindent em que $\mathbf{Y}$ é o vetor da variável resposta, $\boldsymbol{\beta}$ é o vetor de coeficientes associados às covariáveis $\mathbf{X} = \left( \mathbf{X}_1, \dots, \mathbf{X}_p \right)^\top$ e $\boldsymbol{\varepsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I}\sigma^2)$ é o vetor de erros estocásticos associado às observações. Ao final do processo de modelagem obtém-se um modelo da forma
 
 
 \begin{align}
-	\hat{\boldsymbol{Y}} = \boldsymbol{X \hat{\beta}}, \label{modelo_linear_basico}
+	\hat{\mathbf{Y}} = \mathbf{X} \boldsymbol{\hat{\beta}}, \label{modelo_linear_basico}
 \end{align}
 
 \noindent em que $\hat{\boldsymbol{\beta}}$ são estimadores obtidos pelo método de mínimos quadrados ordinários ou máxima verossimilhança para $\boldsymbol{\beta}$ \citep{kutner2005applied}.
@@ -353,55 +351,103 @@ Este modelo de regressão, que também pode ser chamado de \textit{modelo de efe
 
 \subsection{Modelos Lineares Hierárquicos}
 
-REVISAR TODA ESSA SEÇÃO COM DEMIDENKO + CADERNOS UFV
+Frequentemente pesquisas em domínios variados do conhecimento estudam fenômenos em que as unidades de análise são agregadas em categorias \citep{adewale2007understanding, mcmahon2007scales}. Esses diferentes níveis de análise, indivíduos ou grupos, e suas características requerem diferentes formas de representação e técnicas de inferência que comportem adequadamente as estruturas de covariância envolvidas.
 
-Frequentemente pesquisas em domínios variados do conhecimento estudam fenômenos em que as unidades de análise são agregadas em categorias \citep{adewale2007understanding, mcmahon2007scales}. Em alguns casos, as unidades são aninhadas em um ou mais níveis de categorias. Esses diferentes níveis de análise, indivíduos ou grupos, e suas características ou intervenções sobre níveis diferentes requerem diferentes formas de representação e técnicas de inferência que comportem adequadamente as estruturas de covariância envolvidas.
-
-Modelos multinível substituem duas práticas comuns na utilização de regressões lineares: transformação de variáveis categóricas em variáveis binárias (*dummy*) e planificação do nível de análise, ou seja, utilização de medidas de grupos e indivíduos como descritores diretos da unidade de análise. A utilização de um modelo multinível permite a construção de estimadores que contornam essas estratégias e representam melhor indivíduos e grupos no contexto de suas características \citep{hox2017multilevel, gelman_hill_2007}. Esse tipo de modelo linear pode ser representado na forma
+Modelos hierarquizados, ou mistos, substituem duas práticas comuns na utilização de regressões lineares: transformação de variáveis categóricas em variáveis binárias (\textit{dummy}) e planificação do nível de análise, ou seja, utilização de medidas de grupos e indivíduos como descritores diretos da unidade de análise. A utilização de um modelo misto permite a construção de estimadores que contornam essas estratégias e representam melhor indivíduos em seus agrupamentos no contexto de suas características \citep{hox2017multilevel, gelman_hill_2007}. Esse tipo de modelo linear pode ser representado da forma
 
 
 \begin{align}
-	y_{ij} = \beta_{0j} + \sum\limits_{k = 1}^{p} \beta_{kj} \, x_{ik} + \varepsilon_{ij}, \label{213}
+	\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \mathbf{Z}\boldsymbol{u} + \boldsymbol{\varepsilon}, \label{213}
 \end{align}
-%
-%\noindent em que $y_{ij}$ é a variável resposta a nível de indivíduo, $\beta_{0j}$ é o intercepto para o grupo $j = 1, 2, \dots, J$ a que esse indivíduo pertence, $\beta_{kj}$ são os coeficientes para cada covariável de nível individual $x_{ik}, k = 0, 1, \dots, K$ e $\varepsilon_{ij} \overset{iid}{\sim} N(0, \sigma^2_\varepsilon)$ é a componente aleatória para indivíduos.
-%
-%No entanto, $\boldsymbol{\beta}$ é estimado a partir das covariáveis de nível superior. Se considerarmos apenas um nível, cada $\beta_{kj}$ é expresso por
-%
-%
-%\begin{align}
-%	\beta_{kj} & = \gamma_{k0} + \sum\limits_{l = 1}^{L} \gamma_{klj} \, z_{lj} + u_{kj}, \quad l = 1, 2, \dots, L \label{214}
-%\end{align}
-%
-%
-%\noindent em que $\gamma_{k0}$ é o componente fixo, $\gamma_{klj}$ é o coeficiente para cada covariável $z_{l(.)}$ de nível superior $j$ e $u_{kj} \overset{iid}{\sim} N(0, \sigma^2_{u_{kj}})$ é a componente aleatória de cada $\beta_{k(.)}$ do grupo $j$. Uma propriedade deste tipo de modelo é que $E(\gamma_{klj}) = 0$, de modo que é possível depreender da equação (\ref{214}) que $\beta_{k} \sim N(0, \sigma^2_{u_{k}})$.
-%
-%Se for considerado o caso simplificado de apenas uma covariável de cada nível e substituirmos (\ref{214}) em (\label{213}), obtém-se
-%
-%
-%\begin{align}
-%	y_{ij} = \gamma_{00} + \gamma_{01}z_{1j} + \gamma_{10}x_{1ij} + \gamma_{11}z_{1j}x_{1i} + u_{1j}x_{1ij} + \varepsilon_{ij} + u_{0j}. \label{215}
-%\end{align}
-%
-%É imediato da equação (\ref{215}) que:
-%
-%
-%\begin{itemize}
-%	\item Existe um intercepto geral -- $\gamma_{00}$;
-%	\item Existem efeitos que agem exclusivamente sobre variáveis de um nível hierárquico específico -- $\gamma_{01}z_{1j}$ e $\gamma_{10}x_{1ij}$;
-%	\item Existe um efeito de mediação do comportamento do grupo sobre a unidade de observação -- $\gamma_{11}z_{1j}x_{1i}$;
-%	\item Existe uma componente de variância do grupo que incide sobre o comportamento da unidade -- $u_{1j}x_{1ij}$; e
-%	\item Existem componentes de variância entre unidades e entre grupos -- $\varepsilon_{ij}$ e $u_{0j}$ respectivamente.
-%\end{itemize}
-%
-%As componentes de variância deste modelo são obtidas a partir do modelo ajustado apenas com os interceptos \cite{hox2017multilevel} de $\varepsilon_{ij}$ e $u_{0j}$, de modo que se pode calcular a proporção de variância no segundo nível da hierarquia, entre agrupamentos. Essa estatística pode ser interpretada como uma correlação entre indivíduos de um mesmo grupo, presumidamente mais similares entre si quando comparados a outro grupo. Essa medida é chamada de correlação intraclasse e, para o caso de apenas dois níveis, é dada por
-%
-%
-%\begin{align}
-%	\rho = \frac{\sigma^2_{u_0}}{\sigma^2_{u_0}+\sigma^2_{\varepsilon}}. \label{224}
-%\end{align}
+
+\noindent em que $\mathbf{y}$ é o vetor de observações, $\mathbf{X}$ é a matriz de incidência de efeitos fixos conhecida, $\boldsymbol{\beta}$ é o vetor de efeitos fixos, $\mathbf{Z}$ é a matriz de incidência de efeitos aleatórios conhecida, $\boldsymbol{u}$ é o vetor de efeitos aleatórios e $\boldsymbol{\varepsilon}$ é o vetor de efeitos aleatórios \citep{modelos_mistos_ufv}.
+
+Pressupõe-se as seguintes distribuições para $\mathbf{y}$, $\boldsymbol{u}$ e $\boldsymbol{\varepsilon}$:
+
+\begin{align}
+	\begin{bmatrix}
+		\mathbf{y} \\ 
+		\boldsymbol{u} \\ 
+		\boldsymbol{\varepsilon} 
+	\end{bmatrix}
+	\sim \mathcal{N} 
+	\begin{Bmatrix}
+		\begin{bmatrix}
+			\mathbf{X}\boldsymbol{\beta} \\ \mathbf{0} \\ \mathbf{0}
+		\end{bmatrix}, 
+		\begin{bmatrix}
+			\mathbf{ZUZ}^\top + \mathbf{R} & \mathbf{ZU} & \mathbf{R} \\
+			\mathbf{UZ}^\top & \mathbf{U} & \mathbf{0} \\
+			\mathbf{R} & \mathbf{0} & \mathbf{R}
+		\end{bmatrix}
+	\end{Bmatrix}, \label{eq:modelo-misto}
+\end{align}
 
 
+\noindent em que $\mathbf{0}$ são matrizes nulas, $\mathbf{U}$ é a matriz de covariâncias dos efeitos aleatórios $\mathbf{u}$ e $\mathbf{R}$ é a matriz de covariâncias residual.
+
+A matriz $\mathbf{U}$ pode ser ainda decomposta em termos da matriz de correlação $n \times n$ entre os efeitos aleatórios $\mathbf{A}$ e a matriz $\mathbf{U}_0$, a matriz de covariância $q \times q$ entre os efeitos aleatórios das $q$ covariáveis de efeito aleatório \citep{comp_variancias_ufv}. A matriz portanto pode ser expressa como $\mathbf{U} = \mathbf{A} \otimes \mathbf{U}_0$. Da mesma forma, a matriz de $\mathbf{R}$ é decomposta em $\mathbf{R} = \mathbf{I}_n \otimes \mathbf{R}_0$.
+
+
+Soluções de estimação para o modelo \ref{eq:modelo-misto} podem ser obtidas a partir da função densidade de probabilidade conjunta
+
+\begin{align}
+	f(\mathbf{y}, \mathbf{u}) = \frac{1}{(2\pi)^{n/2} |\mathbf{R}|^{1/2}} \exp \left\{ (\mathbf{y} - \mathbf{X}\boldsymbol{\beta} - \mathbf{Z}\mathbf{u})^\top \mathbf{R}^{-1} (\mathbf{y} - \mathbf{X}\boldsymbol{\beta} - \mathbf{Z}\mathbf{u}) \right\}
+\end{align}
+
+\noindent e tomando as soluções homogêneas para as derivadas $\frac{\partial \ell}{\partial \boldsymbol{\beta}}$ e $\frac{\partial \ell}{\partial \mathbf{u}}$ da log-verossimilhança $\ell$. Obtém-se assim o sistema de Equações de Modelos Mistos, dadas por
+
+\begin{align}
+	\begin{bmatrix}
+		\mathbf{X}^\top \mathbf{R}^{-1}\mathbf{X} & \mathbf{X}^\top \mathbf{R}^{-1}\mathbf{Z} \\
+		\mathbf{Z}^\top \mathbf{R}^{-1}\mathbf{X} & \mathbf{Z}^\top \mathbf{R}^{-1}\mathbf{Z} + \mathbf{U}^{-1}
+	\end{bmatrix}
+	\begin{bmatrix}
+		\hat{\boldsymbol{\beta}} \\ \hat{\mathbf{u}}
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		\mathbf{X}^\top \mathbf{R}^{-1}\mathbf{y} \\ \mathbf{Z}^\top \mathbf{R}^{-1}\mathbf{y}
+	\end{bmatrix}.
+\end{align}
+
+\noindent A solução para $\boldsymbol{\beta}$ é obtida via Mínimos Quadrados Generalizados (GLS) ignorando $\mathbf{u}$, obtendo-se
+
+\begin{align}
+	\hat{\boldsymbol{\beta}} = \left( \mathbf{X}^\top\mathbf{V}^{-1}\mathbf{X} \right)^{-} \mathbf{X}^\top\mathbf{V}^{-1} \mathbf{y} \label{eq-betahat}
+\end{align}
+
+\noindent sendo $\mathbf{X}^{-}$ a inversa generalizada de $\mathbf{X}$. A variância dos estimadores de efeitos fixos é dada por
+
+\begin{align}
+	\text{Var}(\hat{\boldsymbol{\beta}}) = \left( \mathbf{X}^\top \mathbf{V}^{-1} \mathbf{X} \right)^{-} \mathbf{X}^\top \mathbf{V}^{-1} \mathbf{X} \left( \mathbf{X}^\top \mathbf{V}^{-1} \mathbf{X} \right)^{-},
+\end{align}
+
+\noindent que depende de $\text{Var}(\mathbf{y}) = \mathbf{V} = \mathbf{ZUZ}^\top + \mathbf{R}$, que é uma matriz particionada, de modo que sua inversa é dada por 
+
+\begin{align}
+	 \mathbf{V}^{-1} = \mathbf{R}^{-1} - \mathbf{R}^{-1} \mathbf{Z} \left( \mathbf{Z}^\top \mathbf{R}^{-1} \mathbf{Z} + \mathbf{U}^{-1} \right)^{-1} \mathbf{Z}^\top \mathbf{R}^{-1}.
+\end{align}
+
+\noindent Como consequência de \ref{eq-betahat}, 
+
+\begin{align}
+	\hat{\mathbf{u}} &= \left( \mathbf{Z}^\top \mathbf{R}^{-1} \mathbf{Z} + \mathbf{U}^{-1} \right)^{-1}\mathbf{Z}^\top \mathbf{R}^{-1} \left( \mathbf{y} - \mathbf{X} \hat{\boldsymbol{\beta}} \right) \nonumber \\
+	&= \mathbf{UZ}^\top \mathbf{V}^{-1} \left( \mathbf{y} - \mathbf{X} \hat{\boldsymbol{\beta}} \right),
+\end{align}
+
+\noindent que é o melhor preditor linear linear não-viesado (BLUP) para os efeitos aleatórios. A variância desse preditor é dada por
+
+\begin{align}
+	\text{Var}(\hat{\mathbf{u}}) &= \text{Var} \left[ \mathbf{UZ}^\top \mathbf{V}^{-1} \left( \mathbf{y} - \mathbf{X} \hat{\boldsymbol{\beta}} \right) \right] \nonumber \\
+	&= \mathbf{UZ}^\top \mathbf{V}^{-1} \left[ \text{Var}(\mathbf{y}) - 2\text{Cov}	\left(\mathbf{y}, \hat{\boldsymbol{\beta}}^\top \mathbf{X}^\top  \right) +  \text{Var}(\mathbf{X} \hat{\boldsymbol{\beta}})\right] \mathbf{V}^{-1} \mathbf{ZU}^\top \nonumber \\
+	&= \mathbf{UZ}^\top \left[ \mathbf{V}^{-1} -  \mathbf{V}^{-1} \mathbf{X} \left( \mathbf{X}^\top \mathbf{V}^{-1} \mathbf{X} \right)^{-} \mathbf{X}^\top \mathbf{V}^{-1} \right]  \mathbf{ZU}^\top.
+\end{align}
+	
+Dessa forma temos quase todos as componentes do modelo definidas, exceto $\mathbf{U}_0$ e $\mathbf{R}_0$.
+
+Restricted Maximum Likelihood?
+Qual algoritmo o pacote usa?
+Qual pacote?
 
 
 \chapter{Metodologia}
@@ -409,6 +455,12 @@ Modelos multinível substituem duas práticas comuns na utilização de regress�
 
 COLOCAR CLUSTER REGIONAL NO MODELO HIERARQUICO
 
+INCLUIR AQUI QUE ui é o critério de seleção + referência
+
+% explicar no método o que querem dizer A e U e pq u é o critério de seleção.
+
+% INCLUIR NO MÉTODO
+%De acordo com \cite{comp_variancias_ufv}, o efeito aleatório desse modelo é o efeito genético aditivo, que é o que se deseja estimar. POR QUE?
 
 
 \section{Conjuntos de dados}

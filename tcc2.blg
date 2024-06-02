@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tcc2.aux
 The style file: bbs2.bst
 Database file #1: biblio.bib
-You've used 15 entries,
+You've used 17 entries,
             2023 wiz_defined-function locations,
-            585 strings with 7354 characters,
-and the built_in function-call counts, 7226 in all, are:
-= -- 663
-> -- 440
-< -- 11
-+ -- 160
-- -- 158
-* -- 690
-:= -- 1274
-add.period$ -- 47
-call.type$ -- 15
-change.case$ -- 146
-chr.to.int$ -- 15
-cite$ -- 15
-duplicate$ -- 224
-empty$ -- 419
-format.name$ -- 183
-if$ -- 1370
-int.to.chr$ -- 1
+            595 strings with 7577 characters,
+and the built_in function-call counts, 8004 in all, are:
+= -- 729
+> -- 486
+< -- 13
++ -- 177
+- -- 174
+* -- 770
+:= -- 1414
+add.period$ -- 53
+call.type$ -- 17
+change.case$ -- 162
+chr.to.int$ -- 16
+cite$ -- 17
+duplicate$ -- 252
+empty$ -- 465
+format.name$ -- 201
+if$ -- 1514
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 78
-num.names$ -- 46
-pop$ -- 142
+missing$ -- 25
+newline$ -- 88
+num.names$ -- 52
+pop$ -- 162
 preamble$ -- 1
-purify$ -- 152
+purify$ -- 170
 quote$ -- 0
-skip$ -- 175
+skip$ -- 192
 stack$ -- 0
-substring$ -- 406
-swap$ -- 48
-text.length$ -- 4
+substring$ -- 430
+swap$ -- 56
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 86
 warning$ -- 0
-while$ -- 50
+while$ -- 54
 width$ -- 0
-write$ -- 194
+write$ -- 220

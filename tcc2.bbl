@@ -55,6 +55,16 @@ Kutner, M.~H., Nachtsheim, C.~J., Neter, J., \& Li, W. (2005).
 \newblock {\em Applied linear statistical models}.
 \newblock McGraw-hill.
 
+\bibitem[\protect\astroncite{Martins et~al.}{1993a}]{comp_variancias_ufv}
+Martins, E.~N., Lopes, P.~S., Almeida~e Silva, M., \& Regazzi, A.~J. (1993a).
+\newblock {\em Estimação de Componentes de Variância}, volume~39 of {\em Cadernos Didáticos}.
+\newblock Editora UFV.
+
+\bibitem[\protect\astroncite{Martins et~al.}{1993b}]{modelos_mistos_ufv}
+Martins, E.~N., Lopes, P.~S., Almeida~e Silva, M., \& Regazzi, A.~J. (1993b).
+\newblock {\em Modelo Linear Misto}, volume~38 of {\em Cadernos Didáticos}.
+\newblock Editora UFV.
+
 \bibitem[\protect\astroncite{McMahon e Diez}{2007}]{mcmahon2007scales}
 McMahon, S.~M. \& Diez, J.~M. (2007).
 \newblock Scales of association: hierarchical linear models and the measurement of ecological systems.
